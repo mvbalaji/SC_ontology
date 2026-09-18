@@ -34,9 +34,10 @@ Thumbs.db
 *.pre-*
 *.tmp
 
-# Organiser's blank template (5MB binary, not code). The completed
-# submission deck IS tracked.
+# Organiser's blank template (5MB binary, not code) and the completed
+# submission deck — both stay local-only, not on GitHub.
 Prototype Submission Template*.pptx
+CoCo_Hackathon_SupplyChainKG_Submission.pptx
 
 # The knowledge graph itself IS tracked (KG__KG_NODES.csv, KG__KG_EDGES.csv,
 # SEMANTIC__DOCUMENT_CORPUS.csv) - 5 MB total, and the artifact this project
