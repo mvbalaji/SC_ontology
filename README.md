@@ -1,0 +1,98 @@
+# Supply Chain KG
+
+A virtual knowledge graph over supply-chain data in Snowflake, queried in plain
+English through a Cortex agent.
+
+Built for the **CoCo CLI Hackathon — GCC Edition**.
+
+There is no graph database here. The knowledge graph is a pair of ordinary
+Snowflake tables (`KG_NODES`, `KG_EDGES`) projected from the existing star
+schema, with graph analytics precomputed in SQL and a semantic view on top.
+A Cortex agent turns questions into SQL against that view, executes it, and
+writes the answer.
+
+```
+question → Cortex agent → semantic view → SQL → KG tables → answer + table + chart
+```
+
+## What it does
+
+- **Asks the graph in English.** "Which supplier sites are single points of
+  failure?" resolves to betweenness centrality over 7,613 nodes and 26,524
+  edges, executed and narrated.
+- **Searches the documents too.** Contracts, non-conformance reports and
+  supplier scorecards are indexed with Cortex Search, so quality and contractual
+  questions answer from the same chat.
+- **Shows its work.** Every answer carries the executed SQL, the result table,
+  a chart, and the agent's reasoning trace.
+- **Draws the real subgraph.** Entities named in an answer are looked up in
+  `KG_NODES` and expanded one hop, so the graph view is the actual graph — not
+  an illustration.
+- **Remembers the conversation.** Follow-ups like "and number 2?" resolve
+  against the transcript.
+
+## Accuracy
+
+Ten questions with ground truth computed independently in SQL: **9 of 10 exact**.
+The tenth reported 1,788 single-sourced parts against a true 1,790 — a real
+discrepancy, documented rather than hidden.
+
+## Layout
+
+| Path | What it is |
+|---|---|
+| `app.py` | Flask app — Cortex agent calls, KG subgraph, dashboard |
+| `01_base_tables_and_data.sql` | Star schema + synthetic data (deterministic seed) |
+| `02_enrich_semantic_view.sql` | Business metrics per node, semantic view enrichment |
+| `deploy_production.sql` | Full deployment: roles, schemas, KG, search, agents |
+| `wire_agent_tools.sql` | Attaches Analyst / Search / sql_exec to a stored agent |
+| `static/`, `templates/` | Single-page chat UI |
+
+## Running it
+
+Needs Python 3.10+ and a Snowflake account with Cortex enabled.
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env    # fill in SNOWFLAKE_PAT and the account host
+python app.py
+```
+
+Then open <http://localhost:8000>.
+
+Deploy the data side with `deploy_production.sql`, which runs
+`01_base_tables_and_data.sql` and `02_enrich_semantic_view.sql` in order and
+creates the semantic view, the Cortex Search service and the agent.
+
+## How the agent is configured
+
+The agent's model, instructions and tools are defined inline in `app.py` and
+sent on every `POST /api/v2/cortex/agent:run` call. That keeps the tool
+configuration in version control and means there is no stored `AGENT` object to
+create, grant or keep in sync — the app is the whole deployment.
+
+Four tools are attached:
+
+| Tool | Resource |
+|---|---|
+| `kg_analyst` | text-to-SQL over `SCS.SEMANTIC.SV_SUPPLY_CHAIN_KG` |
+| `kg_search` | Cortex Search over `SCS.SEMANTIC.SCM_DOCUMENT_SEARCH` |
+| `sql_exec` | executes the generated SQL on `COMPUTE_WH` |
+| `data_to_chart` | returns a Vega-Lite spec the UI renders |
+
+A programmatic access token needs an extra header or the endpoint rejects it as
+an OAuth token:
+
+```
+X-Snowflake-Authorization-Token-Type: PROGRAMMATIC_ACCESS_TOKEN
+```
+
+## Data
+
+All data is synthetic, generated from a fixed seed. No real supplier, customer
+or commercial information is present.
+
+## Security
+
+`.env` is gitignored and holds the only credential. `app.py` reads it from the
+environment and never hard-codes it. Rotate by editing `.env` — no code change.

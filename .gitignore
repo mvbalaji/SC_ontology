@@ -1,0 +1,38 @@
+# ── Secrets ────────────────────────────────────────────────────────────────
+# .env holds the Snowflake programmatic access token. Never commit it.
+# Use .env.example as the template.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+
+# ── Runtime state (per-deployment, not source) ─────────────────────────────
+logs/
+history/
+agent_threads.json
+dashboard_metrics_data.json
+dashboard_snapshot_state.json
+*.json.tmp
+
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# ── Editors / OS ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ── Scratch ────────────────────────────────────────────────────────────────
+*.bak
+*.pre-*
+*.tmp
+
+# Hackathon template (5MB binary, not code)
+Prototype Submission Template*.pptx
