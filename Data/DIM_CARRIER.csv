@@ -1,0 +1,21 @@
+CARRIER_ID,CARRIER_NAME,CARRIER_MODE
+1,Pacific Shipping Co,OCEAN
+2,Atlantic Lines,OCEAN
+3,Global Ocean Freight,OCEAN
+4,Asia Express Shipping,OCEAN
+5,EuroSea Transport,OCEAN
+6,SkyFreight Global,AIR
+7,AirCargo Express,AIR
+8,JetLogistics,AIR
+9,Pacific Air Cargo,AIR
+10,TransAir Services,AIR
+11,Highway Logistics,TRUCK
+12,Continental Trucking,TRUCK
+13,FastLane Transport,TRUCK
+14,CrossBorder Freight,TRUCK
+15,Metro Delivery Co,TRUCK
+16,RailConnect,RAIL
+17,TransRail Cargo,RAIL
+18,InterRail Logistics,RAIL
+19,OmniLogistics,MULTIMODAL
+20,IntegFreight Solutions,MULTIMODAL

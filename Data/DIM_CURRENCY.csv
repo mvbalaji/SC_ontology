@@ -1,0 +1,13 @@
+CURRENCY_CODE,CURRENCY_NAME,TO_USD_RATE
+USD,US Dollar,1.0000
+EUR,Euro,1.0800
+GBP,British Pound,1.2700
+JPY,Japanese Yen,0.0067
+CNY,Chinese Yuan,0.1380
+KRW,South Korean Won,0.0007
+TWD,Taiwan Dollar,0.0310
+MYR,Malaysian Ringgit,0.2200
+THB,Thai Baht,0.0280
+INR,Indian Rupee,0.0120
+MXN,Mexican Peso,0.0580
+BRL,Brazilian Real,0.2000

@@ -1,0 +1,37 @@
+SUB_COMMODITY_ID,SUB_COMMODITY_NAME,COMMODITY_ID
+1,Analog ICs,1
+2,MCU & Microprocessors,1
+3,Memory ICs,1
+4,Capacitors,2
+5,Inductors,2
+6,Resistors,2
+7,Board-to-Board,3
+8,RF Connectors,3
+9,Wire-to-Board,3
+10,Ceramic Substrates,4
+11,Flex PCB,4
+12,Rigid PCB,4
+13,Enclosures,5
+14,Fasteners,5
+15,Heat Sinks,5
+16,Boxes & Cartons,6
+17,ESD Bags,6
+18,Foam Inserts,6
+19,LEDs,7
+20,Laser Diodes,7
+21,Photodetectors,7
+22,AC-DC Converters,8
+23,Battery Packs,8
+24,DC-DC Converters,8
+25,Accelerometers,9
+26,Pressure Sensors,9
+27,Temperature Sensors,9
+28,Fiber Optic,10
+29,Power Cable,10
+30,Signal Cable,10
+31,Aluminum,11
+32,Copper,11
+33,Steel,11
+34,Conformal Coating,12
+35,Flux,12
+36,Solder Paste,12

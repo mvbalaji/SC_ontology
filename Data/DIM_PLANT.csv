@@ -1,0 +1,13 @@
+PLANT_ID,PLANT_CODE,PLANT_NAME,CITY,COUNTRY_ID
+1,PLT-US01,Asterion Austin,Austin,1
+2,PLT-US02,Asterion San Jose,San Jose,1
+3,PLT-US03,Asterion Detroit,Detroit,1
+4,PLT-MX01,Asterion Guadalajara,Guadalajara,3
+5,PLT-MX02,Asterion Monterrey,Monterrey,3
+6,PLT-DE01,Asterion Munich,Munich,5
+7,PLT-CN01,Asterion Shanghai,Shanghai,11
+8,PLT-CN02,Asterion Shenzhen,Shenzhen,11
+9,PLT-JP01,Asterion Tokyo,Tokyo,12
+10,PLT-MY01,Asterion Penang,Penang,15
+11,PLT-IN01,Asterion Bangalore,Bangalore,21
+12,PLT-BR01,Asterion Sao Paulo,Sao Paulo,4

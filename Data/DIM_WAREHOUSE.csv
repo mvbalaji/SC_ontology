@@ -1,0 +1,26 @@
+WAREHOUSE_ID,WAREHOUSE_CODE,WAREHOUSE_NAME,PLANT_ID,CITY,COUNTRY_ID,CAPACITY_UNITS
+1,WH-001,Warehouse 1,1,Austin,1,124994
+2,WH-002,Warehouse 2,2,San Jose,1,221942
+3,WH-003,Warehouse 3,3,Detroit,1,50984
+4,WH-004,Warehouse 4,4,Guadalajara,3,238058
+5,WH-005,Warehouse 5,5,Monterrey,3,66639
+6,WH-006,Warehouse 6,6,Munich,5,73514
+7,WH-007,Warehouse 7,7,Shanghai,11,137107
+8,WH-008,Warehouse 8,8,Shenzhen,11,197389
+9,WH-009,Warehouse 9,9,Tokyo,12,142234
+10,WH-010,Warehouse 10,10,Penang,15,124352
+11,WH-011,Warehouse 11,11,Bangalore,21,179893
+12,WH-012,Warehouse 12,12,Sao Paulo,4,121698
+13,WH-013,Warehouse 13,,Dallas,1,225023
+14,WH-014,Warehouse 14,,Atlanta,1,157060
+15,WH-015,Warehouse 15,,Chicago,1,229660
+16,WH-016,Warehouse 16,,Memphis,1,241940
+17,WH-017,Warehouse 17,,Los Angeles,1,79145
+18,WH-018,Warehouse 18,,Rotterdam,8,60953
+19,WH-019,Warehouse 19,,Singapore,18,201270
+20,WH-020,Warehouse 20,,Hong Kong,11,214970
+21,WH-021,Warehouse 21,,Tokyo,12,184413
+22,WH-022,Warehouse 22,,Dubai,21,186227
+23,WH-023,Warehouse 23,,Mumbai,21,64365
+24,WH-024,Warehouse 24,,Sao Paulo,4,137483
+25,WH-025,Warehouse 25,,Mexico City,3,131362

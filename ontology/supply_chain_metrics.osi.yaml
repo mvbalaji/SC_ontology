@@ -1,0 +1,778 @@
+# Asterion Supply Chain — governed metrics, OSI v1.0
+#
+# Target: POST /namespaces/{ns}/import-osi   body: { "content": "<this file>" }
+#
+# Translated from the METRICS and FACTS blocks of the Snowflake semantic view
+# SCS.SEMANTIC.SV_SUPPLY_CHAIN_KG (see ../02_enrich_semantic_view.sql), so the
+# Cortex agent and the accelerator resolve the same numbers from the same SQL.
+#
+# Two conformance notes, both load-bearing:
+#
+#   1. The vendor block is `custom_extensions: [{vendor_name: COA, data: {...}}]`.
+#      The shipped examples in packages/metric-service/examples/ use a top-level
+#      `x_coa:` key instead, which the parser never reads — _parse_custom_extensions
+#      only looks at raw["custom_extensions"] and matches vendor_name == "COA",
+#      taking the payload from ext["data"]. Authoring against those examples
+#      silently drops data_source_id, source_table, unit and ontology_concepts,
+#      and import then fails with "No data_source_id in custom_extensions".
+#
+#   2. Every expression is a full SELECT. Bare aggregate fragments like
+#      "SUM(amount)" are rejected: the serve-time SQL firewall only executes
+#      top-level SELECT statements, and onboarding validates the same shape.
+#
+# Metric names match ^[A-Za-z0-9_]{1,128}$. All data is synthetic.
+
+osi_spec_version: "1.0"
+
+datasets:
+  - name: SCS.INVENTORY.PO_HEADER
+    data_source_id: ds-scs-snowflake
+    description: "Purchase order headers — 20,000 POs against 500 suppliers"
+    synonyms: [purchase orders, POs, procurement orders]
+
+  - name: SCS.INVENTORY.PO_LINE
+    data_source_id: ds-scs-snowflake
+    description: "Purchase order line items — 60,000 lines carrying quantity and unit price"
+    synonyms: [PO lines, PO items]
+
+  - name: SCS.INVENTORY.GOODS_RECEIPT
+    data_source_id: ds-scs-snowflake
+    description: "Goods receipts — 90,000 receipts with days variance against supplier promise date"
+    synonyms: [receipts, GRN, goods received notes]
+
+  - name: SCS.INVENTORY.QUALITY_INSPECTION
+    data_source_id: ds-scs-snowflake
+    description: "Incoming quality inspections — 10,000 inspections with PPM defect rate"
+    synonyms: [inspections, IQC, quality checks]
+
+  - name: SCS.INVENTORY.NONCONFORMANCE_REPORT
+    data_source_id: ds-scs-snowflake
+    description: "Nonconformance reports — 1,000 NCRs with severity and disposition"
+    synonyms: [NCRs, quality issues, defect reports]
+
+  - name: SCS.INVENTORY.SALES_ORDER_HEADER
+    data_source_id: ds-scs-snowflake
+    description: "Customer sales order headers — 10,000 orders across 80 customers"
+    synonyms: [sales orders, customer orders, demand]
+
+  - name: SCS.INVENTORY.SALES_ORDER_LINE
+    data_source_id: ds-scs-snowflake
+    description: "Sales order line items — 40,000 lines carrying quantity and unit price"
+    synonyms: [SO lines, order lines]
+
+  - name: SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+    data_source_id: ds-scs-snowflake
+    description: "Month-end inventory snapshots by part and warehouse — ~1.2M rows"
+    synonyms: [inventory, stock on hand, inventory position]
+
+  - name: SCS.INVENTORY.SHIPMENT_HEADER
+    data_source_id: ds-scs-snowflake
+    description: "Shipment headers — 18,000 shipments with carrier, lane and status"
+    synonyms: [shipments, freight, consignments]
+
+  - name: SCS.INVENTORY.IOT_SENSOR_READING
+    data_source_id: ds-scs-snowflake
+    description: "IoT container sensor readings — 500,000 rows, ~1.5% breach rate"
+    synonyms: [telemetry, sensor data, cold chain readings]
+
+  - name: SCS.INVENTORY.SUPPLIER_PART_APPROVAL
+    data_source_id: ds-scs-snowflake
+    description: "Approved supplier-part combinations — 40,000 rows forming the approved vendor list"
+    synonyms: [AVL, ASL, approved vendor list]
+
+  - name: SCS.INVENTORY.DIM_SUPPLIER
+    data_source_id: ds-scs-snowflake
+    description: "Supplier master — 500 suppliers with reliability rating"
+    synonyms: [suppliers, vendors]
+
+metrics:
+
+  # ------------------------------------------------------------------ spend
+  - name: total_procurement_spend
+    description: >-
+      Total committed purchase-order value in USD, excluding cancelled orders.
+      Computed as quantity times unit price summed across PO lines.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(pl.QUANTITY * pl.UNIT_PRICE) AS TOTAL_PROCUREMENT_SPEND
+            FROM SCS.INVENTORY.PO_LINE pl
+            JOIN SCS.INVENTORY.PO_HEADER ph ON pl.PO_ID = ph.PO_ID
+            WHERE ph.STATUS <> 'CANCELLED'
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT SUM(pl.QUANTITY * pl.UNIT_PRICE) AS TOTAL_PROCUREMENT_SPEND
+            FROM SCS.INVENTORY.PO_LINE pl
+            JOIN SCS.INVENTORY.PO_HEADER ph ON pl.PO_ID = ph.PO_ID
+            WHERE ph.STATUS <> 'CANCELLED'
+    ai_context:
+      synonyms: [total spend, procurement spend, purchase spend, buy value, direct spend]
+      instructions: >-
+        Use for any question about how much was spent, bought or committed with suppliers.
+        Group by supplier via PO_HEADER.SUPPLIER_ID, by commodity via DIM_PART.COMMODITY_ID,
+        or by plant via PO_HEADER.PLANT_ID. Cancelled POs are already excluded — do not
+        re-filter on status. This is committed order value, not invoiced or paid amount.
+      examples:
+        - "What was our total procurement spend last year?"
+        - "Which suppliers have the highest spend?"
+        - "Show spend by commodity"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.PO_LINE
+          unit: USD
+          return_type: decimal
+          time_dimension: ORDER_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#PurchaseOrderLine"
+            - "https://asterion.example.com/ontology/supplychain#Supplier"
+
+  - name: purchase_order_count
+    description: "Count of distinct non-cancelled purchase orders."
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT COUNT(DISTINCT PO_ID) AS PURCHASE_ORDER_COUNT
+            FROM SCS.INVENTORY.PO_HEADER
+            WHERE STATUS <> 'CANCELLED'
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT COUNT(DISTINCT PO_ID) AS PURCHASE_ORDER_COUNT
+            FROM SCS.INVENTORY.PO_HEADER
+            WHERE STATUS <> 'CANCELLED'
+    ai_context:
+      synonyms: [PO count, number of purchase orders, order volume]
+      instructions: "Use for PO transaction volume, not value. For value use total_procurement_spend."
+      examples:
+        - "How many purchase orders did we place with this supplier?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.PO_HEADER
+          unit: count
+          return_type: integer
+          time_dimension: ORDER_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#PurchaseOrder"
+
+  # ------------------------------------------------------- delivery performance
+  - name: on_time_delivery_rate_pct
+    description: >-
+      Percentage of goods receipts that arrived on or before the supplier's
+      original promise date. A receipt is on time when DAYS_VARIANCE <= 0.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(CASE WHEN DAYS_VARIANCE <= 0 THEN 1 ELSE 0 END)
+                   / NULLIF(COUNT(*), 0) * 100 AS ON_TIME_DELIVERY_RATE_PCT
+            FROM SCS.INVENTORY.GOODS_RECEIPT
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT CAST(SUM(CASE WHEN DAYS_VARIANCE <= 0 THEN 1 ELSE 0 END) AS DECIMAL(18,4))
+                   / NULLIF(COUNT(*), 0) * 100 AS ON_TIME_DELIVERY_RATE_PCT
+            FROM SCS.INVENTORY.GOODS_RECEIPT
+    ai_context:
+      synonyms: [OTD, on time delivery, delivery performance, OTIF, schedule adherence]
+      instructions: >-
+        The canonical supplier delivery KPI. Higher is better. Join GOODS_RECEIPT to
+        PO_LINE then PO_HEADER to attribute a receipt to a supplier. Do not confuse with
+        avg_lead_time_variance_days, which is signed days rather than a percentage.
+      examples:
+        - "What is our on-time delivery rate?"
+        - "Which suppliers have the worst OTD?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.GOODS_RECEIPT
+          unit: percent
+          return_type: decimal
+          time_dimension: RECEIPT_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#GoodsReceipt"
+            - "https://asterion.example.com/ontology/supplychain#Supplier"
+
+  - name: avg_lead_time_variance_days
+    description: >-
+      Average signed days variance between actual receipt date and the supplier's
+      promise date. Positive means late, negative means early.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT AVG(DAYS_VARIANCE) AS AVG_LEAD_TIME_VARIANCE_DAYS
+            FROM SCS.INVENTORY.GOODS_RECEIPT
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT AVG(CAST(DAYS_VARIANCE AS DECIMAL(18,4))) AS AVG_LEAD_TIME_VARIANCE_DAYS
+            FROM SCS.INVENTORY.GOODS_RECEIPT
+    ai_context:
+      synonyms: [lead time variance, days late, schedule variance, delivery variance]
+      instructions: >-
+        Signed: positive is late, negative is early, so LOWER is better. Rank worst
+        performers with ORDER BY DESC. Attribute to a supplier by joining PO_LINE then
+        PO_HEADER.
+      examples:
+        - "Which suppliers deliver latest against their promise dates?"
+        - "What is the average delivery variance for this commodity?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.GOODS_RECEIPT
+          unit: days
+          return_type: decimal
+          time_dimension: RECEIPT_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#GoodsReceipt"
+
+  - name: avg_supplier_reliability_rating
+    description: "Average reliability rating across active suppliers, on a 0.00-1.00 scale."
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT AVG(RELIABILITY_RATING) AS AVG_SUPPLIER_RELIABILITY_RATING
+            FROM SCS.INVENTORY.DIM_SUPPLIER
+            WHERE ACTIVE = TRUE
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT AVG(RELIABILITY_RATING) AS AVG_SUPPLIER_RELIABILITY_RATING
+            FROM SCS.INVENTORY.DIM_SUPPLIER
+            WHERE ACTIVE = TRUE
+    ai_context:
+      synonyms: [supplier reliability, supplier score, reliability rating, vendor rating]
+      instructions: >-
+        A master-data attribute on the supplier, not derived from transactions. Range
+        0.00-1.00 where higher is better. Inactive suppliers are excluded.
+      examples:
+        - "What is the average reliability of our supplier base?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.DIM_SUPPLIER
+          unit: ratio
+          return_type: decimal
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#Supplier"
+
+  # ---------------------------------------------------------------- quality
+  - name: avg_defect_ppm
+    description: >-
+      Average defect rate in parts per million across incoming quality inspections.
+      PPM is precomputed per inspection as defects relative to sample size.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT AVG(PPM) AS AVG_DEFECT_PPM
+            FROM SCS.INVENTORY.QUALITY_INSPECTION
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT AVG(PPM) AS AVG_DEFECT_PPM
+            FROM SCS.INVENTORY.QUALITY_INSPECTION
+    ai_context:
+      synonyms: [PPM, defect rate, parts per million, quality rate, defectives]
+      instructions: >-
+        The primary incoming-quality KPI. Higher is worse, so rank worst offenders with
+        ORDER BY DESC. Groups directly by SUPPLIER_ID or PART_ID, both of which are
+        columns on QUALITY_INSPECTION — no join needed.
+      examples:
+        - "Which suppliers have the worst defect rate?"
+        - "What is the PPM for this part?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.QUALITY_INSPECTION
+          unit: ppm
+          return_type: decimal
+          time_dimension: INSPECTION_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#QualityInspection"
+            - "https://asterion.example.com/ontology/supplychain#Supplier"
+            - "https://asterion.example.com/ontology/supplychain#Part"
+
+  - name: inspection_fail_rate_pct
+    description: >-
+      Percentage of incoming quality inspections with a FAIL result. CONDITIONAL
+      results count as not failed.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(CASE WHEN RESULT = 'FAIL' THEN 1 ELSE 0 END)
+                   / NULLIF(COUNT(*), 0) * 100 AS INSPECTION_FAIL_RATE_PCT
+            FROM SCS.INVENTORY.QUALITY_INSPECTION
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT CAST(SUM(CASE WHEN RESULT = 'FAIL' THEN 1 ELSE 0 END) AS DECIMAL(18,4))
+                   / NULLIF(COUNT(*), 0) * 100 AS INSPECTION_FAIL_RATE_PCT
+            FROM SCS.INVENTORY.QUALITY_INSPECTION
+    ai_context:
+      synonyms: [fail rate, inspection failure rate, reject rate, lot rejection rate]
+      instructions: >-
+        RESULT is one of PASS, FAIL or CONDITIONAL. Only FAIL counts toward this rate.
+        Higher is worse.
+      examples:
+        - "What share of inspections fail?"
+        - "Which parts fail inspection most often?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.QUALITY_INSPECTION
+          unit: percent
+          return_type: decimal
+          time_dimension: INSPECTION_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#QualityInspection"
+
+  - name: nonconformance_count
+    description: "Count of nonconformance reports raised."
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT COUNT(*) AS NONCONFORMANCE_COUNT
+            FROM SCS.INVENTORY.NONCONFORMANCE_REPORT
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT COUNT(*) AS NONCONFORMANCE_COUNT
+            FROM SCS.INVENTORY.NONCONFORMANCE_REPORT
+    ai_context:
+      synonyms: [NCR count, total NCRs, nonconformance total, quality incidents]
+      instructions: >-
+        Group by SUPPLIER_ID, PART_ID or PLANT_ID, all columns on the NCR table. For
+        severity-weighted questions use critical_nonconformance_count instead.
+      examples:
+        - "How many NCRs were raised against this supplier?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.NONCONFORMANCE_REPORT
+          unit: count
+          return_type: integer
+          time_dimension: NCR_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#NonconformanceReport"
+
+  - name: critical_nonconformance_count
+    description: "Count of nonconformance reports with CRITICAL severity."
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT COUNT(*) AS CRITICAL_NONCONFORMANCE_COUNT
+            FROM SCS.INVENTORY.NONCONFORMANCE_REPORT
+            WHERE SEVERITY = 'CRITICAL'
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT COUNT(*) AS CRITICAL_NONCONFORMANCE_COUNT
+            FROM SCS.INVENTORY.NONCONFORMANCE_REPORT
+            WHERE SEVERITY = 'CRITICAL'
+    ai_context:
+      synonyms: [critical NCRs, critical quality issues, severe nonconformances]
+      instructions: "SEVERITY is one of CRITICAL, MAJOR or MINOR. This counts CRITICAL only."
+      examples:
+        - "How many critical quality issues do we have open?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.NONCONFORMANCE_REPORT
+          unit: count
+          return_type: integer
+          time_dimension: NCR_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#NonconformanceReport"
+
+  # ---------------------------------------------------------------- inventory
+  - name: inventory_on_hand_value
+    description: >-
+      Total value of stock on hand at the most recent snapshot date, in USD.
+      Precomputed per row as on-hand quantity times unit cost.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(ON_HAND_VALUE) AS INVENTORY_ON_HAND_VALUE
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+            WHERE SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                   FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT SUM(ON_HAND_VALUE) AS INVENTORY_ON_HAND_VALUE
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+            WHERE SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                   FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+    ai_context:
+      synonyms: [inventory value, stock value, on hand value, working capital in stock]
+      instructions: >-
+        This is a snapshot fact, not additive over time. Summing across SNAPSHOT_DATE
+        values double-counts stock. Always pin to a single snapshot date — this metric
+        pins to the latest. For a trend, group by SNAPSHOT_DATE instead of summing.
+      examples:
+        - "How much inventory value are we holding?"
+        - "What is our stock value by warehouse?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+          unit: USD
+          return_type: decimal
+          time_dimension: SNAPSHOT_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#InventorySnapshot"
+            - "https://asterion.example.com/ontology/supplychain#Warehouse"
+
+  - name: avg_days_of_inventory
+    description: >-
+      Average days of inventory coverage at the latest snapshot, computed per row
+      as on-hand quantity divided by average daily usage.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT AVG(DOI) AS AVG_DAYS_OF_INVENTORY
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+            WHERE DOI IS NOT NULL
+              AND SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                   FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT AVG(DOI) AS AVG_DAYS_OF_INVENTORY
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+            WHERE DOI IS NOT NULL
+              AND SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                   FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+    ai_context:
+      synonyms: [DOI, days of inventory, days of supply, DOS, coverage days, weeks of supply]
+      instructions: >-
+        DOI is null where daily usage is zero or unknown; those rows are excluded rather
+        than treated as zero coverage. Low DOI signals stockout risk, high DOI signals
+        excess. Pinned to the latest snapshot.
+      examples:
+        - "What is our average days of inventory?"
+        - "Which parts have less than 10 days of supply?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+          unit: days
+          return_type: decimal
+          time_dimension: SNAPSHOT_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#InventorySnapshot"
+
+  - name: excess_inventory_value
+    description: >-
+      Value of stock on hand carrying more than 90 days of coverage at the latest
+      snapshot. The conventional excess-and-obsolete threshold for this business.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(ON_HAND_VALUE) AS EXCESS_INVENTORY_VALUE
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+            WHERE DOI > 90
+              AND SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                   FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT SUM(ON_HAND_VALUE) AS EXCESS_INVENTORY_VALUE
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+            WHERE DOI > 90
+              AND SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                   FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+    ai_context:
+      synonyms: [excess inventory, slow moving stock, overstock, E and O, obsolete risk]
+      instructions: >-
+        The 90-day threshold is a governed business rule — do not substitute another
+        cutoff without agreement. Rows with null DOI are excluded.
+      examples:
+        - "How much excess inventory are we carrying?"
+        - "Which warehouses hold the most slow-moving stock?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+          unit: USD
+          return_type: decimal
+          time_dimension: SNAPSHOT_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#InventorySnapshot"
+
+  - name: eol_part_inventory_value
+    description: >-
+      Value of stock on hand for parts whose lifecycle status is EOL or OBSOLETE
+      at the latest snapshot. Quantifies write-off exposure from dying components.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(f.ON_HAND_VALUE) AS EOL_PART_INVENTORY_VALUE
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT f
+            JOIN SCS.INVENTORY.DIM_PART p ON f.PART_ID = p.PART_ID
+            WHERE p.LIFECYCLE_STATUS IN ('EOL', 'OBSOLETE')
+              AND f.SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                     FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT SUM(f.ON_HAND_VALUE) AS EOL_PART_INVENTORY_VALUE
+            FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT f
+            JOIN SCS.INVENTORY.DIM_PART p ON f.PART_ID = p.PART_ID
+            WHERE p.LIFECYCLE_STATUS IN ('EOL', 'OBSOLETE')
+              AND f.SNAPSHOT_DATE = (SELECT MAX(SNAPSHOT_DATE)
+                                     FROM SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT)
+    ai_context:
+      synonyms: [EOL exposure, obsolete inventory, end of life stock, write off risk]
+      instructions: >-
+        LIFECYCLE_STATUS is one of ACTIVE, NRND, EOL or OBSOLETE. NRND (not recommended
+        for new designs) is deliberately excluded here — it is a design-in warning, not
+        a write-off signal.
+      examples:
+        - "What is our exposure to end-of-life parts?"
+        - "How much obsolete inventory do we hold?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.FACT_INVENTORY_SNAPSHOT
+          unit: USD
+          return_type: decimal
+          time_dimension: SNAPSHOT_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#InventorySnapshot"
+            - "https://asterion.example.com/ontology/supplychain#Part"
+
+  # ------------------------------------------------------------------ logistics
+  - name: shipment_delay_rate_pct
+    description: "Percentage of shipments currently in DELAYED status."
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(CASE WHEN STATUS = 'DELAYED' THEN 1 ELSE 0 END)
+                   / NULLIF(COUNT(*), 0) * 100 AS SHIPMENT_DELAY_RATE_PCT
+            FROM SCS.INVENTORY.SHIPMENT_HEADER
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT CAST(SUM(CASE WHEN STATUS = 'DELAYED' THEN 1 ELSE 0 END) AS DECIMAL(18,4))
+                   / NULLIF(COUNT(*), 0) * 100 AS SHIPMENT_DELAY_RATE_PCT
+            FROM SCS.INVENTORY.SHIPMENT_HEADER
+    ai_context:
+      synonyms: [delay rate, late shipments, freight delay rate, transit exceptions]
+      instructions: >-
+        STATUS is one of IN_TRANSIT, DELIVERED or DELAYED. Group by CARRIER_ID to compare
+        carriers or by LANE_ID to find problem lanes.
+      examples:
+        - "What share of shipments are delayed?"
+        - "Which carrier has the worst delay rate?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.SHIPMENT_HEADER
+          unit: percent
+          return_type: decimal
+          time_dimension: SHIP_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#Shipment"
+            - "https://asterion.example.com/ontology/supplychain#Carrier"
+
+  - name: avg_actual_transit_days
+    description: >-
+      Average realised transit time in days from ship date to delivery date, across
+      delivered shipments. Distinct from the planned DIM_LANE.TRANSIT_DAYS_AVG.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT AVG(DATEDIFF('day', SHIP_DATE, DELIVERY_DATE)) AS AVG_ACTUAL_TRANSIT_DAYS
+            FROM SCS.INVENTORY.SHIPMENT_HEADER
+            WHERE DELIVERY_DATE IS NOT NULL
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT AVG(CAST(DELIVERY_DATE - SHIP_DATE AS DECIMAL(18,4))) AS AVG_ACTUAL_TRANSIT_DAYS
+            FROM SCS.INVENTORY.SHIPMENT_HEADER
+            WHERE DELIVERY_DATE IS NOT NULL
+    ai_context:
+      synonyms: [transit time, actual transit days, door to door time, delivery time]
+      instructions: >-
+        Actual, not planned. Compare against DIM_LANE.TRANSIT_DAYS_AVG to find lanes
+        running behind plan. In-transit shipments have a null delivery date and are excluded.
+      examples:
+        - "How long do shipments actually take on this lane?"
+        - "Which lanes run slower than planned?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.SHIPMENT_HEADER
+          unit: days
+          return_type: decimal
+          time_dimension: SHIP_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#Shipment"
+            - "https://asterion.example.com/ontology/supplychain#Lane"
+
+  - name: cold_chain_breach_rate_pct
+    description: >-
+      Percentage of IoT container sensor readings that exceeded a monitored
+      threshold for temperature, humidity, shock or tilt.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(CASE WHEN BREACH_FLAG THEN 1 ELSE 0 END)
+                   / NULLIF(COUNT(*), 0) * 100 AS COLD_CHAIN_BREACH_RATE_PCT
+            FROM SCS.INVENTORY.IOT_SENSOR_READING
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT CAST(SUM(CASE WHEN BREACH_FLAG = TRUE THEN 1 ELSE 0 END) AS DECIMAL(18,4))
+                   / NULLIF(COUNT(*), 0) * 100 AS COLD_CHAIN_BREACH_RATE_PCT
+            FROM SCS.INVENTORY.IOT_SENSOR_READING
+    ai_context:
+      synonyms: [breach rate, excursion rate, cold chain breach, sensor excursions, threshold breaches]
+      instructions: >-
+        BREACH_FLAG is precomputed per reading and already accounts for all four monitored
+        variables — do not re-derive it from raw temperature or shock values. This is a
+        rate over readings, not over shipments; for affected shipments count
+        DISTINCT SHIPMENT_ID where BREACH_FLAG.
+      examples:
+        - "What is our cold chain breach rate?"
+        - "Which shipments had sensor excursions?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.IOT_SENSOR_READING
+          unit: percent
+          return_type: decimal
+          time_dimension: READING_TS
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#SensorReading"
+            - "https://asterion.example.com/ontology/supplychain#Shipment"
+
+  # ----------------------------------------------------------- sourcing risk
+  - name: single_sourced_part_count
+    description: >-
+      Count of parts with exactly one approved supplier. The core sourcing
+      concentration risk measure: these parts have no qualified alternate.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT COUNT(*) AS SINGLE_SOURCED_PART_COUNT FROM (
+              SELECT PART_ID
+              FROM SCS.INVENTORY.SUPPLIER_PART_APPROVAL
+              WHERE STATUS = 'APPROVED'
+              GROUP BY PART_ID
+              HAVING COUNT(DISTINCT SUPPLIER_ID) = 1
+            ) t
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT COUNT(*) AS SINGLE_SOURCED_PART_COUNT FROM (
+              SELECT PART_ID
+              FROM SCS.INVENTORY.SUPPLIER_PART_APPROVAL
+              WHERE STATUS = 'APPROVED'
+              GROUP BY PART_ID
+              HAVING COUNT(DISTINCT SUPPLIER_ID) = 1
+            ) t
+    ai_context:
+      synonyms: [single source, sole sourced parts, single sourcing risk, no alternate source]
+      instructions: >-
+        Counts distinct approved suppliers per part, not approval rows — one supplier with
+        several approved sites is still single-sourced. Parts with no approval at all are
+        not counted here; they are unsourced rather than single-sourced.
+      examples:
+        - "How many parts are single sourced?"
+        - "Which single-sourced parts carry the most spend?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.SUPPLIER_PART_APPROVAL
+          unit: count
+          return_type: integer
+          time_dimension: APPROVAL_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#SupplierPartApproval"
+            - "https://asterion.example.com/ontology/supplychain#Part"
+
+  # -------------------------------------------------------------------- demand
+  - name: total_revenue
+    description: >-
+      Total sales order value in USD, computed as quantity times unit price
+      summed across sales order lines.
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT SUM(QUANTITY * UNIT_PRICE) AS TOTAL_REVENUE
+            FROM SCS.INVENTORY.SALES_ORDER_LINE
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT SUM(QUANTITY * UNIT_PRICE) AS TOTAL_REVENUE
+            FROM SCS.INVENTORY.SALES_ORDER_LINE
+    ai_context:
+      synonyms: [revenue, sales, total sales, sales total, top line, booked revenue]
+      instructions: >-
+        Booked order value, not recognised or invoiced revenue. Group by product via
+        PRODUCT_ID on the line, or by customer by joining SALES_ORDER_HEADER.
+      examples:
+        - "What was our total revenue?"
+        - "Which products generate the most revenue?"
+        - "Show revenue by customer tier"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.SALES_ORDER_LINE
+          unit: USD
+          return_type: decimal
+          time_dimension: REQUESTED_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#SalesOrderLine"
+            - "https://asterion.example.com/ontology/supplychain#Product"
+            - "https://asterion.example.com/ontology/supplychain#Customer"
+
+  - name: sales_order_count
+    description: "Count of distinct customer sales orders."
+    expression:
+      dialects:
+        - dialect: SNOWFLAKE
+          expression: >-
+            SELECT COUNT(DISTINCT ORDER_ID) AS SALES_ORDER_COUNT
+            FROM SCS.INVENTORY.SALES_ORDER_HEADER
+        - dialect: ANSI_SQL
+          expression: >-
+            SELECT COUNT(DISTINCT ORDER_ID) AS SALES_ORDER_COUNT
+            FROM SCS.INVENTORY.SALES_ORDER_HEADER
+    ai_context:
+      synonyms: [order count, number of orders, order volume, demand volume]
+      instructions: "Order transaction volume, not value. For value use total_revenue."
+      examples:
+        - "How many orders did this customer place?"
+    custom_extensions:
+      - vendor_name: COA
+        data:
+          data_source_id: ds-scs-snowflake
+          source_table: SCS.INVENTORY.SALES_ORDER_HEADER
+          unit: count
+          return_type: integer
+          time_dimension: ORDER_DATE
+          ontology_concepts:
+            - "https://asterion.example.com/ontology/supplychain#SalesOrder"
+            - "https://asterion.example.com/ontology/supplychain#Customer"

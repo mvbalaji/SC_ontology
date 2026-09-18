@@ -1,0 +1,25 @@
+COUNTRY_ID,COUNTRY_NAME,COUNTRY_CODE,REGION_ID
+1,Canada,CA,1
+2,Mexico,MX,1
+3,United States,US,1
+4,France,FR,2
+5,Germany,DE,2
+6,Italy,IT,2
+7,Netherlands,NL,2
+8,Poland,PL,2
+9,United Kingdom,GB,2
+10,China,CN,3
+11,Japan,JP,3
+12,South Korea,KR,3
+13,Taiwan,TW,3
+14,Indonesia,ID,4
+15,Malaysia,MY,4
+16,Philippines,PH,4
+17,Singapore,SG,4
+18,Thailand,TH,4
+19,Vietnam,VN,4
+20,India,IN,5
+21,Argentina,AR,6
+22,Brazil,BR,6
+23,Chile,CL,6
+24,Colombia,CO,6

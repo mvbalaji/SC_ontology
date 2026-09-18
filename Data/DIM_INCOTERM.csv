@@ -1,0 +1,12 @@
+INCOTERM_CODE,INCOTERM_NAME
+EXW,Ex Works
+FCA,Free Carrier
+FAS,Free Alongside Ship
+FOB,Free on Board
+CFR,Cost and Freight
+CIF,Cost Insurance Freight
+CPT,Carriage Paid To
+CIP,Carriage Insurance Paid
+DAP,Delivered at Place
+DPU,Delivered at Place Unloaded
+DDP,Delivered Duty Paid

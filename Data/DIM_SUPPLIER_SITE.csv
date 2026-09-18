@@ -1,0 +1,1201 @@
+SITE_ID,SUPPLIER_ID,SITE_NAME,CITY,COUNTRY_ID,LEAD_TIME_DAYS,IS_PRIMARY,ACTIVE
+211,80,ORION MANUFACTURING - Austin,Austin,1,50,True,True
+212,80,ORION MANUFACTURING - Guadalajara,Guadalajara,3,43,False,True
+213,80,ORION MANUFACTURING - Munich,Munich,5,39,False,True
+214,80,ORION MANUFACTURING - Penang,Penang,15,46,False,True
+842,312,GAMMA COMPONENTS - Suzhou,Suzhou,11,42,True,True
+519,195,STELLAR TECHNOLOGIES - Austin,Austin,1,69,True,True
+520,195,STELLAR TECHNOLOGIES - Munich,Munich,5,39,False,True
+521,195,STELLAR TECHNOLOGIES - Santiago,Santiago,24,31,False,True
+537,201,CREST SEMICONDUCTORS - Taichung,Taichung,14,49,True,True
+538,201,CREST SEMICONDUCTORS - Singapore,Singapore,18,59,False,True
+367,141,CIPHER SEMICONDUCTORS - Monterrey,Monterrey,3,51,True,True
+368,141,CIPHER SEMICONDUCTORS - Milan,Milan,9,70,False,True
+369,141,CIPHER SEMICONDUCTORS - Bangkok,Bangkok,17,21,False,True
+373,143,CIPHER MATERIALS - Stuttgart,Stuttgart,5,48,True,True
+374,143,CIPHER MATERIALS - Tokyo,Tokyo,12,19,False,True
+121,46,SOLARIS PRECISION - Guadalajara,Guadalajara,3,70,True,True
+122,46,SOLARIS PRECISION - Shanghai,Shanghai,11,54,False,True
+123,46,SOLARIS PRECISION - Bangkok,Bangkok,17,39,False,True
+993,368,BETA SOLUTIONS - Monterrey,Monterrey,3,45,True,True
+994,368,BETA SOLUTIONS - Paris,Paris,6,49,False,True
+995,368,BETA SOLUTIONS - Shenzhen,Shenzhen,11,28,False,True
+996,368,BETA SOLUTIONS - Seoul,Seoul,13,37,False,True
+997,368,BETA SOLUTIONS - Hsinchu,Hsinchu,14,39,False,True
+998,368,BETA SOLUTIONS - Bangkok,Bangkok,17,66,False,True
+891,336,KAPPA PRECISION - Toronto,Toronto,2,46,True,True
+892,336,KAPPA PRECISION - Shenzhen,Shenzhen,11,54,False,True
+893,336,KAPPA PRECISION - Suzhou,Suzhou,11,18,False,True
+1002,370,BETA MANUFACTURING - Guadalajara,Guadalajara,3,32,True,True
+1003,370,BETA MANUFACTURING - Hsinchu,Hsinchu,14,38,False,True
+1004,370,BETA MANUFACTURING - Manila,Manila,19,55,False,True
+1135,418,NEXUS SOLUTIONS - Tokyo,Tokyo,12,57,True,True
+454,173,IONIC MATERIALS - Monterrey,Monterrey,3,56,True,True
+455,173,IONIC MATERIALS - Singapore,Singapore,18,52,False,True
+789,290,OMEGA MANUFACTURING - Suzhou,Suzhou,11,21,True,True
+790,290,OMEGA MANUFACTURING - Tokyo,Tokyo,12,63,False,True
+791,290,OMEGA MANUFACTURING - Bangalore,Bangalore,21,49,False,True
+366,140,ECHO MANUFACTURING - Jakarta,Jakarta,20,18,True,True
+827,308,DELTA SOLUTIONS - Munich,Munich,5,26,True,True
+828,308,DELTA SOLUTIONS - Stuttgart,Stuttgart,5,40,False,True
+829,308,DELTA SOLUTIONS - Dongguan,Dongguan,11,64,False,True
+830,308,DELTA SOLUTIONS - Seoul,Seoul,13,16,False,True
+129,48,SOLARIS SOLUTIONS - Austin,Austin,1,61,True,True
+130,48,SOLARIS SOLUTIONS - Tokyo,Tokyo,12,45,False,True
+1110,410,TORUS MANUFACTURING - Amsterdam,Amsterdam,8,43,True,True
+1111,410,TORUS MANUFACTURING - Shanghai,Shanghai,11,26,False,True
+1112,410,TORUS MANUFACTURING - Chennai,Chennai,21,46,False,True
+1113,410,TORUS MANUFACTURING - Santiago,Santiago,24,32,False,True
+707,263,PULSE MATERIALS - Guadalajara,Guadalajara,3,56,True,True
+708,263,PULSE MATERIALS - Stuttgart,Stuttgart,5,48,False,True
+709,263,PULSE MATERIALS - London,London,7,44,False,True
+710,263,PULSE MATERIALS - Amsterdam,Amsterdam,8,54,False,True
+711,263,PULSE MATERIALS - Jakarta,Jakarta,20,72,False,True
+323,121,ATLAS SEMICONDUCTORS - Seoul,Seoul,13,66,True,True
+324,121,ATLAS SEMICONDUCTORS - Bogota,Bogota,23,27,False,True
+553,207,CREST SYSTEMS - Shenzhen,Shenzhen,11,45,True,True
+1033,381,LAMBDA SEMICONDUCTORS - Detroit,Detroit,1,19,True,True
+1034,381,LAMBDA SEMICONDUCTORS - Guadalajara,Guadalajara,3,60,False,True
+1035,381,LAMBDA SEMICONDUCTORS - Kuala Lumpur,Kuala Lumpur,15,38,False,True
+980,362,BETA COMPONENTS - Detroit,Detroit,1,23,True,True
+981,362,BETA COMPONENTS - Monterrey,Monterrey,3,61,False,True
+982,362,BETA COMPONENTS - Munich,Munich,5,61,False,True
+1068,392,IOTA COMPONENTS - Monterrey,Monterrey,3,52,True,True
+1069,392,IOTA COMPONENTS - Sao Paulo,Sao Paulo,4,56,False,True
+1070,392,IOTA COMPONENTS - Kuala Lumpur,Kuala Lumpur,15,57,False,True
+649,242,MATRIX COMPONENTS - Amsterdam,Amsterdam,8,64,True,True
+650,242,MATRIX COMPONENTS - Tokyo,Tokyo,12,29,False,True
+651,242,MATRIX COMPONENTS - Jakarta,Jakarta,20,59,False,True
+522,196,STELLAR PRECISION - Munich,Munich,5,59,True,True
+523,196,STELLAR PRECISION - Shenzhen,Shenzhen,11,58,False,True
+524,196,STELLAR PRECISION - Suzhou,Suzhou,11,64,False,True
+525,196,STELLAR PRECISION - Hsinchu,Hsinchu,14,42,False,True
+526,196,STELLAR PRECISION - Bogota,Bogota,23,26,False,True
+527,196,STELLAR PRECISION - Santiago,Santiago,24,63,False,True
+983,363,BETA MATERIALS - Stuttgart,Stuttgart,5,26,True,True
+909,342,THETA COMPONENTS - Milan,Milan,9,39,True,True
+910,342,THETA COMPONENTS - Shenzhen,Shenzhen,11,29,False,True
+1106,408,TORUS SOLUTIONS - London,London,7,20,True,True
+803,296,SIGMA PRECISION - Paris,Paris,6,64,True,True
+804,296,SIGMA PRECISION - Shanghai,Shanghai,11,19,False,True
+805,296,SIGMA PRECISION - Jakarta,Jakarta,20,23,False,True
+411,156,HELIX PRECISION - Penang,Penang,15,58,True,True
+412,156,HELIX PRECISION - Jakarta,Jakarta,20,22,False,True
+413,156,HELIX PRECISION - Pune,Pune,21,20,False,True
+472,180,IONIC MANUFACTURING - Shanghai,Shanghai,11,30,True,True
+473,180,IONIC MANUFACTURING - Kuala Lumpur,Kuala Lumpur,15,36,False,True
+26,11,BLUEFORGE SEMICONDUCTORS - Pune,Pune,21,70,True,True
+883,332,KAPPA COMPONENTS - Dongguan,Dongguan,11,26,True,True
+884,332,KAPPA COMPONENTS - Tokyo,Tokyo,12,38,False,True
+1100,405,TORUS TECHNOLOGIES - Hsinchu,Hsinchu,14,42,True,True
+1076,395,IOTA TECHNOLOGIES - Monterrey,Monterrey,3,45,True,True
+1077,395,IOTA TECHNOLOGIES - Stuttgart,Stuttgart,5,40,False,True
+1078,395,IOTA TECHNOLOGIES - Paris,Paris,6,67,False,True
+1079,395,IOTA TECHNOLOGIES - Penang,Penang,15,23,False,True
+932,348,THETA SOLUTIONS - Detroit,Detroit,1,19,True,True
+933,348,THETA SOLUTIONS - Paris,Paris,6,35,False,True
+934,348,THETA SOLUTIONS - Shanghai,Shanghai,11,38,False,True
+935,348,THETA SOLUTIONS - Seoul,Seoul,13,55,False,True
+936,348,THETA SOLUTIONS - Jakarta,Jakarta,20,65,False,True
+150,59,QUANTUM INDUSTRIES - Beijing,Beijing,11,67,True,True
+151,59,QUANTUM INDUSTRIES - Tokyo,Tokyo,12,38,False,True
+278,102,NOVA COMPONENTS - Austin,Austin,1,67,True,True
+279,102,NOVA COMPONENTS - Warsaw,Warsaw,10,52,False,True
+280,102,NOVA COMPONENTS - Singapore,Singapore,18,16,False,True
+281,102,NOVA COMPONENTS - Bangalore,Bangalore,21,46,False,True
+282,102,NOVA COMPONENTS - Pune,Pune,21,45,False,True
+306,114,PRISM ELECTRONICS - London,London,7,16,True,True
+307,114,PRISM ELECTRONICS - Chennai,Chennai,21,64,False,True
+308,114,PRISM ELECTRONICS - Santiago,Santiago,24,52,False,True
+1080,396,IOTA PRECISION - Austin,Austin,1,43,True,True
+1081,396,IOTA PRECISION - Munich,Munich,5,20,False,True
+843,313,GAMMA MATERIALS - Beijing,Beijing,11,49,True,True
+844,313,GAMMA MATERIALS - Bangalore,Bangalore,21,63,False,True
+381,146,CIPHER PRECISION - Paris,Paris,6,45,True,True
+382,146,CIPHER PRECISION - Ho Chi Minh City,Ho Chi Minh City,16,24,False,True
+460,176,IONIC PRECISION - Paris,Paris,6,27,True,True
+461,176,IONIC PRECISION - Shanghai,Shanghai,11,43,False,True
+462,176,IONIC PRECISION - Manila,Manila,19,23,False,True
+463,176,IONIC PRECISION - Jakarta,Jakarta,20,68,False,True
+1098,404,TORUS ELECTRONICS - Amsterdam,Amsterdam,8,36,True,True
+1099,404,TORUS ELECTRONICS - Hanoi,Hanoi,16,41,False,True
+1024,378,EPSILON SOLUTIONS - Detroit,Detroit,1,52,True,True
+1025,378,EPSILON SOLUTIONS - Bangalore,Bangalore,21,53,False,True
+1026,378,EPSILON SOLUTIONS - Buenos Aires,Buenos Aires,22,19,False,True
+1027,378,EPSILON SOLUTIONS - Bogota,Bogota,23,15,False,True
+1028,378,EPSILON SOLUTIONS - Santiago,Santiago,24,39,False,True
+286,105,NOVA TECHNOLOGIES - Austin,Austin,1,18,True,True
+287,105,NOVA TECHNOLOGIES - Bangkok,Bangkok,17,36,False,True
+288,105,NOVA TECHNOLOGIES - Singapore,Singapore,18,26,False,True
+976,361,BETA SEMICONDUCTORS - Shanghai,Shanghai,11,45,True,True
+977,361,BETA SEMICONDUCTORS - Kuala Lumpur,Kuala Lumpur,15,31,False,True
+978,361,BETA SEMICONDUCTORS - Ho Chi Minh City,Ho Chi Minh City,16,16,False,True
+979,361,BETA SEMICONDUCTORS - Santiago,Santiago,24,27,False,True
+975,360,ALPHA MANUFACTURING - Dongguan,Dongguan,11,24,True,True
+192,71,ORION SEMICONDUCTORS - Hanoi,Hanoi,16,40,True,True
+193,71,ORION SEMICONDUCTORS - Bangkok,Bangkok,17,54,False,True
+583,217,LUNAR SYSTEMS - Austin,Austin,1,40,True,True
+584,217,LUNAR SYSTEMS - Kuala Lumpur,Kuala Lumpur,15,14,False,True
+585,217,LUNAR SYSTEMS - Singapore,Singapore,18,65,False,True
+586,217,LUNAR SYSTEMS - Bangalore,Bangalore,21,20,False,True
+261,95,ZENITH TECHNOLOGIES - Bangkok,Bangkok,17,18,True,True
+724,268,PULSE SOLUTIONS - Beijing,Beijing,11,62,True,True
+725,268,PULSE SOLUTIONS - Osaka,Osaka,12,38,False,True
+726,268,PULSE SOLUTIONS - Taichung,Taichung,14,15,False,True
+657,245,MATRIX TECHNOLOGIES - Santiago,Santiago,24,23,True,True
+878,330,ZETA MANUFACTURING - Monterrey,Monterrey,3,54,True,True
+879,330,ZETA MANUFACTURING - Sao Paulo,Sao Paulo,4,21,False,True
+880,330,ZETA MANUFACTURING - Milan,Milan,9,68,False,True
+881,330,ZETA MANUFACTURING - Singapore,Singapore,18,14,False,True
+1156,426,PYRO PRECISION - Austin,Austin,1,39,True,True
+687,255,SYNTH TECHNOLOGIES - Detroit,Detroit,1,33,True,True
+688,255,SYNTH TECHNOLOGIES - Toronto,Toronto,2,17,False,True
+689,255,SYNTH TECHNOLOGIES - Shanghai,Shanghai,11,21,False,True
+690,255,SYNTH TECHNOLOGIES - Manila,Manila,19,41,False,True
+813,299,SIGMA INDUSTRIES - Suzhou,Suzhou,11,47,True,True
+814,299,SIGMA INDUSTRIES - Tokyo,Tokyo,12,22,False,True
+815,299,SIGMA INDUSTRIES - Kuala Lumpur,Kuala Lumpur,15,14,False,True
+816,299,SIGMA INDUSTRIES - Singapore,Singapore,18,15,False,True
+1062,390,LAMBDA MANUFACTURING - Shenzhen,Shenzhen,11,16,True,True
+670,250,MATRIX MANUFACTURING - Austin,Austin,1,65,True,True
+671,250,MATRIX MANUFACTURING - Toronto,Toronto,2,50,False,True
+84,33,VERTEX MATERIALS - Beijing,Beijing,11,45,True,True
+745,274,DRIFT ELECTRONICS - Amsterdam,Amsterdam,8,32,True,True
+746,274,DRIFT ELECTRONICS - Tokyo,Tokyo,12,46,False,True
+652,243,MATRIX MATERIALS - San Jose,San Jose,1,33,True,True
+653,243,MATRIX MATERIALS - Shenzhen,Shenzhen,11,58,False,True
+654,243,MATRIX MATERIALS - Seoul,Seoul,13,61,False,True
+490,186,VORTEX PRECISION - Monterrey,Monterrey,3,17,True,True
+491,186,VORTEX PRECISION - Paris,Paris,6,37,False,True
+492,186,VORTEX PRECISION - Beijing,Beijing,11,14,False,True
+493,186,VORTEX PRECISION - Buenos Aires,Buenos Aires,22,17,False,True
+444,167,FLUX SYSTEMS - Paris,Paris,6,66,True,True
+445,167,FLUX SYSTEMS - Jakarta,Jakarta,20,49,False,True
+821,304,DELTA ELECTRONICS - Suzhou,Suzhou,11,44,True,True
+822,304,DELTA ELECTRONICS - Kuala Lumpur,Kuala Lumpur,15,70,False,True
+823,304,DELTA ELECTRONICS - Santiago,Santiago,24,40,False,True
+1150,425,PYRO TECHNOLOGIES - Austin,Austin,1,62,True,True
+1151,425,PYRO TECHNOLOGIES - Paris,Paris,6,30,False,True
+1152,425,PYRO TECHNOLOGIES - Milan,Milan,9,19,False,True
+1153,425,PYRO TECHNOLOGIES - Ho Chi Minh City,Ho Chi Minh City,16,48,False,True
+1154,425,PYRO TECHNOLOGIES - Jakarta,Jakarta,20,19,False,True
+1155,425,PYRO TECHNOLOGIES - Buenos Aires,Buenos Aires,22,19,False,True
+741,273,DRIFT MATERIALS - London,London,7,64,True,True
+742,273,DRIFT MATERIALS - Warsaw,Warsaw,10,27,False,True
+743,273,DRIFT MATERIALS - Beijing,Beijing,11,51,False,True
+744,273,DRIFT MATERIALS - Chennai,Chennai,21,55,False,True
+115,43,SOLARIS MATERIALS - San Jose,San Jose,1,21,True,True
+116,43,SOLARIS MATERIALS - Toronto,Toronto,2,72,False,True
+117,43,SOLARIS MATERIALS - Chennai,Chennai,21,51,False,True
+157,61,APEX SEMICONDUCTORS - Munich,Munich,5,33,True,True
+158,61,APEX SEMICONDUCTORS - Hanoi,Hanoi,16,16,False,True
+885,333,KAPPA MATERIALS - San Jose,San Jose,1,43,True,True
+951,351,ALPHA SEMICONDUCTORS - Monterrey,Monterrey,3,19,True,True
+952,351,ALPHA SEMICONDUCTORS - Guadalajara,Guadalajara,3,51,False,True
+953,351,ALPHA SEMICONDUCTORS - Hsinchu,Hsinchu,14,72,False,True
+954,351,ALPHA SEMICONDUCTORS - Bangkok,Bangkok,17,30,False,True
+999,369,BETA INDUSTRIES - Sao Paulo,Sao Paulo,4,68,True,True
+1000,369,BETA INDUSTRIES - Shenzhen,Shenzhen,11,31,False,True
+1001,369,BETA INDUSTRIES - Buenos Aires,Buenos Aires,22,24,False,True
+400,153,HELIX MATERIALS - Shanghai,Shanghai,11,35,True,True
+401,153,HELIX MATERIALS - Hsinchu,Hsinchu,14,19,False,True
+194,72,ORION COMPONENTS - Stuttgart,Stuttgart,5,36,True,True
+195,72,ORION COMPONENTS - Manila,Manila,19,29,False,True
+736,272,DRIFT COMPONENTS - Toronto,Toronto,2,63,True,True
+737,272,DRIFT COMPONENTS - Beijing,Beijing,11,51,False,True
+738,272,DRIFT COMPONENTS - Osaka,Osaka,12,64,False,True
+739,272,DRIFT COMPONENTS - Hsinchu,Hsinchu,14,24,False,True
+740,272,DRIFT COMPONENTS - Santiago,Santiago,24,66,False,True
+275,101,NOVA SEMICONDUCTORS - Tokyo,Tokyo,12,46,True,True
+276,101,NOVA SEMICONDUCTORS - Ho Chi Minh City,Ho Chi Minh City,16,54,False,True
+277,101,NOVA SEMICONDUCTORS - Bogota,Bogota,23,50,False,True
+1124,414,NEXUS ELECTRONICS - Toronto,Toronto,2,51,True,True
+1125,414,NEXUS ELECTRONICS - Warsaw,Warsaw,10,56,False,True
+1126,414,NEXUS ELECTRONICS - Beijing,Beijing,11,64,False,True
+1127,414,NEXUS ELECTRONICS - Seoul,Seoul,13,46,False,True
+1128,414,NEXUS ELECTRONICS - Manila,Manila,19,60,False,True
+676,252,SYNTH COMPONENTS - Paris,Paris,6,32,True,True
+677,252,SYNTH COMPONENTS - Milan,Milan,9,44,False,True
+678,252,SYNTH COMPONENTS - Dongguan,Dongguan,11,28,False,True
+679,252,SYNTH COMPONENTS - Osaka,Osaka,12,67,False,True
+680,252,SYNTH COMPONENTS - Kuala Lumpur,Kuala Lumpur,15,16,False,True
+1101,406,TORUS PRECISION - Stuttgart,Stuttgart,5,62,True,True
+1102,406,TORUS PRECISION - London,London,7,64,False,True
+1103,406,TORUS PRECISION - Shenzhen,Shenzhen,11,20,False,True
+1104,406,TORUS PRECISION - Santiago,Santiago,24,21,False,True
+291,107,NOVA SYSTEMS - San Jose,San Jose,1,36,True,True
+292,107,NOVA SYSTEMS - Seoul,Seoul,13,35,False,True
+293,107,NOVA SYSTEMS - Bangalore,Bangalore,21,55,False,True
+91,37,VERTEX SYSTEMS - Tokyo,Tokyo,12,61,True,True
+92,37,VERTEX SYSTEMS - Kuala Lumpur,Kuala Lumpur,15,63,False,True
+93,37,VERTEX SYSTEMS - Ho Chi Minh City,Ho Chi Minh City,16,73,False,True
+94,37,VERTEX SYSTEMS - Pune,Pune,21,44,False,True
+1010,373,EPSILON MATERIALS - Austin,Austin,1,27,True,True
+1011,373,EPSILON MATERIALS - Hsinchu,Hsinchu,14,55,False,True
+1012,373,EPSILON MATERIALS - Taichung,Taichung,14,44,False,True
+1013,373,EPSILON MATERIALS - Chennai,Chennai,21,36,False,True
+18,5,NEXORA TECHNOLOGIES - Tokyo,Tokyo,12,35,True,True
+1,1,NEXORA SEMICONDUCTORS - Monterrey,Monterrey,3,55,True,True
+2,1,NEXORA SEMICONDUCTORS - Sao Paulo,Sao Paulo,4,35,False,True
+3,1,NEXORA SEMICONDUCTORS - Kuala Lumpur,Kuala Lumpur,15,47,False,True
+4,1,NEXORA SEMICONDUCTORS - Bangalore,Bangalore,21,32,False,True
+732,270,PULSE MANUFACTURING - Austin,Austin,1,28,True,True
+733,270,PULSE MANUFACTURING - Stuttgart,Stuttgart,5,29,False,True
+630,234,AETHER ELECTRONICS - Suzhou,Suzhou,11,67,True,True
+631,234,AETHER ELECTRONICS - Bangkok,Bangkok,17,42,False,True
+375,144,CIPHER ELECTRONICS - Detroit,Detroit,1,17,True,True
+376,144,CIPHER ELECTRONICS - Paris,Paris,6,51,False,True
+377,144,CIPHER ELECTRONICS - Suzhou,Suzhou,11,14,False,True
+378,144,CIPHER ELECTRONICS - Dongguan,Dongguan,11,65,False,True
+858,321,ZETA SEMICONDUCTORS - Shenzhen,Shenzhen,11,44,True,True
+859,321,ZETA SEMICONDUCTORS - Pune,Pune,21,61,False,True
+327,124,ATLAS ELECTRONICS - Toronto,Toronto,2,58,True,True
+328,124,ATLAS ELECTRONICS - Seoul,Seoul,13,69,False,True
+329,124,ATLAS ELECTRONICS - Penang,Penang,15,69,False,True
+330,124,ATLAS ELECTRONICS - Hanoi,Hanoi,16,20,False,True
+582,216,LUNAR PRECISION - Bangkok,Bangkok,17,30,True,True
+608,226,COBALT PRECISION - Milan,Milan,9,40,True,True
+609,226,COBALT PRECISION - Shenzhen,Shenzhen,11,52,False,True
+86,35,VERTEX TECHNOLOGIES - Toronto,Toronto,2,64,True,True
+87,35,VERTEX TECHNOLOGIES - Paris,Paris,6,30,False,True
+88,35,VERTEX TECHNOLOGIES - Seoul,Seoul,13,14,False,True
+89,35,VERTEX TECHNOLOGIES - Chennai,Chennai,21,34,False,True
+335,128,ATLAS SOLUTIONS - Tokyo,Tokyo,12,66,True,True
+336,128,ATLAS SOLUTIONS - Hanoi,Hanoi,16,26,False,True
+337,128,ATLAS SOLUTIONS - Bangalore,Bangalore,21,14,False,True
+429,162,FLUX COMPONENTS - Bogota,Bogota,23,46,True,True
+426,160,HELIX MANUFACTURING - Warsaw,Warsaw,10,57,True,True
+929,347,THETA SYSTEMS - San Jose,San Jose,1,32,True,True
+930,347,THETA SYSTEMS - Guadalajara,Guadalajara,3,52,False,True
+931,347,THETA SYSTEMS - Tokyo,Tokyo,12,57,False,True
+635,236,AETHER PRECISION - Dongguan,Dongguan,11,15,True,True
+636,236,AETHER PRECISION - Hanoi,Hanoi,16,66,False,True
+637,236,AETHER PRECISION - Jakarta,Jakarta,20,70,False,True
+638,236,AETHER PRECISION - Pune,Pune,21,60,False,True
+905,340,KAPPA MANUFACTURING - Toronto,Toronto,2,60,True,True
+906,340,KAPPA MANUFACTURING - Suzhou,Suzhou,11,68,False,True
+1179,434,CRYO ELECTRONICS - Tokyo,Tokyo,12,47,True,True
+1180,434,CRYO ELECTRONICS - Kuala Lumpur,Kuala Lumpur,15,38,False,True
+641,239,AETHER INDUSTRIES - Santiago,Santiago,24,36,True,True
+720,267,PULSE SYSTEMS - Toronto,Toronto,2,66,True,True
+721,267,PULSE SYSTEMS - Warsaw,Warsaw,10,21,False,True
+722,267,PULSE SYSTEMS - Bangalore,Bangalore,21,46,False,True
+723,267,PULSE SYSTEMS - Bogota,Bogota,23,63,False,True
+620,231,AETHER SEMICONDUCTORS - Monterrey,Monterrey,3,66,True,True
+621,231,AETHER SEMICONDUCTORS - Dongguan,Dongguan,11,57,False,True
+622,231,AETHER SEMICONDUCTORS - Hsinchu,Hsinchu,14,65,False,True
+623,231,AETHER SEMICONDUCTORS - Bangalore,Bangalore,21,25,False,True
+577,215,LUNAR TECHNOLOGIES - Guadalajara,Guadalajara,3,27,True,True
+578,215,LUNAR TECHNOLOGIES - Sao Paulo,Sao Paulo,4,54,False,True
+579,215,LUNAR TECHNOLOGIES - Paris,Paris,6,17,False,True
+580,215,LUNAR TECHNOLOGIES - Warsaw,Warsaw,10,43,False,True
+581,215,LUNAR TECHNOLOGIES - Shenzhen,Shenzhen,11,20,False,True
+554,208,CREST SOLUTIONS - Guadalajara,Guadalajara,3,14,True,True
+555,208,CREST SOLUTIONS - Dongguan,Dongguan,11,50,False,True
+556,208,CREST SOLUTIONS - Hsinchu,Hsinchu,14,25,False,True
+557,208,CREST SOLUTIONS - Bangkok,Bangkok,17,31,False,True
+1160,428,PYRO SOLUTIONS - Taichung,Taichung,14,29,True,True
+1161,428,PYRO SOLUTIONS - Bangalore,Bangalore,21,32,False,True
+268,99,ZENITH INDUSTRIES - Milan,Milan,9,68,True,True
+570,212,LUNAR COMPONENTS - San Jose,San Jose,1,71,True,True
+571,212,LUNAR COMPONENTS - Milan,Milan,9,58,False,True
+572,212,LUNAR COMPONENTS - Hanoi,Hanoi,16,33,False,True
+806,297,SIGMA SYSTEMS - Stuttgart,Stuttgart,5,63,True,True
+807,297,SIGMA SYSTEMS - Amsterdam,Amsterdam,8,19,False,True
+808,297,SIGMA SYSTEMS - Milan,Milan,9,30,False,True
+809,297,SIGMA SYSTEMS - Beijing,Beijing,11,44,False,True
+498,189,VORTEX INDUSTRIES - Warsaw,Warsaw,10,58,True,True
+499,189,VORTEX INDUSTRIES - Osaka,Osaka,12,48,False,True
+500,189,VORTEX INDUSTRIES - Penang,Penang,15,26,False,True
+501,189,VORTEX INDUSTRIES - Buenos Aires,Buenos Aires,22,45,False,True
+698,259,SYNTH INDUSTRIES - Stuttgart,Stuttgart,5,57,True,True
+699,259,SYNTH INDUSTRIES - Tokyo,Tokyo,12,28,False,True
+700,259,SYNTH INDUSTRIES - Osaka,Osaka,12,60,False,True
+701,259,SYNTH INDUSTRIES - Ho Chi Minh City,Ho Chi Minh City,16,38,False,True
+702,259,SYNTH INDUSTRIES - Chennai,Chennai,21,33,False,True
+703,259,SYNTH INDUSTRIES - Santiago,Santiago,24,26,False,True
+672,251,SYNTH SEMICONDUCTORS - San Jose,San Jose,1,44,True,True
+673,251,SYNTH SEMICONDUCTORS - Monterrey,Monterrey,3,69,False,True
+674,251,SYNTH SEMICONDUCTORS - Bangkok,Bangkok,17,42,False,True
+675,251,SYNTH SEMICONDUCTORS - Santiago,Santiago,24,63,False,True
+619,230,COBALT MANUFACTURING - Suzhou,Suzhou,11,40,True,True
+639,238,AETHER SOLUTIONS - Amsterdam,Amsterdam,8,44,True,True
+640,238,AETHER SOLUTIONS - Bangalore,Bangalore,21,54,False,True
+189,70,APEX MANUFACTURING - Munich,Munich,5,69,True,True
+190,70,APEX MANUFACTURING - Amsterdam,Amsterdam,8,22,False,True
+191,70,APEX MANUFACTURING - Bangalore,Bangalore,21,24,False,True
+389,149,CIPHER INDUSTRIES - Monterrey,Monterrey,3,55,True,True
+616,229,COBALT INDUSTRIES - Suzhou,Suzhou,11,50,True,True
+617,229,COBALT INDUSTRIES - Taichung,Taichung,14,64,False,True
+618,229,COBALT INDUSTRIES - Penang,Penang,15,32,False,True
+874,327,ZETA SYSTEMS - Chennai,Chennai,21,29,True,True
+494,188,VORTEX SOLUTIONS - Stuttgart,Stuttgart,5,46,True,True
+495,188,VORTEX SOLUTIONS - Amsterdam,Amsterdam,8,65,False,True
+496,188,VORTEX SOLUTIONS - Milan,Milan,9,61,False,True
+497,188,VORTEX SOLUTIONS - Santiago,Santiago,24,47,False,True
+309,115,PRISM TECHNOLOGIES - Austin,Austin,1,41,True,True
+310,115,PRISM TECHNOLOGIES - San Jose,San Jose,1,27,False,True
+311,115,PRISM TECHNOLOGIES - London,London,7,45,False,True
+312,115,PRISM TECHNOLOGIES - Dongguan,Dongguan,11,64,False,True
+1039,383,LAMBDA MATERIALS - San Jose,San Jose,1,19,True,True
+1040,383,LAMBDA MATERIALS - Milan,Milan,9,33,False,True
+1041,383,LAMBDA MATERIALS - Shanghai,Shanghai,11,49,False,True
+1042,383,LAMBDA MATERIALS - Dongguan,Dongguan,11,27,False,True
+28,13,BLUEFORGE MATERIALS - Warsaw,Warsaw,10,24,True,True
+29,13,BLUEFORGE MATERIALS - Beijing,Beijing,11,68,False,True
+30,13,BLUEFORGE MATERIALS - Hsinchu,Hsinchu,14,72,False,True
+31,13,BLUEFORGE MATERIALS - Hanoi,Hanoi,16,54,False,True
+85,34,VERTEX ELECTRONICS - Buenos Aires,Buenos Aires,22,44,True,True
+661,247,MATRIX SYSTEMS - Shanghai,Shanghai,11,36,True,True
+662,247,MATRIX SYSTEMS - Shenzhen,Shenzhen,11,31,False,True
+663,247,MATRIX SYSTEMS - Bangkok,Bangkok,17,33,False,True
+792,292,SIGMA COMPONENTS - Guadalajara,Guadalajara,3,15,True,True
+793,292,SIGMA COMPONENTS - Amsterdam,Amsterdam,8,53,False,True
+794,292,SIGMA COMPONENTS - Seoul,Seoul,13,47,False,True
+795,292,SIGMA COMPONENTS - Buenos Aires,Buenos Aires,22,39,False,True
+988,366,BETA PRECISION - Paris,Paris,6,33,True,True
+989,366,BETA PRECISION - Warsaw,Warsaw,10,68,False,True
+990,366,BETA PRECISION - Ho Chi Minh City,Ho Chi Minh City,16,65,False,True
+385,148,CIPHER SOLUTIONS - Austin,Austin,1,16,True,True
+386,148,CIPHER SOLUTIONS - Monterrey,Monterrey,3,54,False,True
+387,148,CIPHER SOLUTIONS - Ho Chi Minh City,Ho Chi Minh City,16,62,False,True
+388,148,CIPHER SOLUTIONS - Bangalore,Bangalore,21,47,False,True
+869,325,ZETA TECHNOLOGIES - San Jose,San Jose,1,63,True,True
+870,325,ZETA TECHNOLOGIES - Singapore,Singapore,18,17,False,True
+871,325,ZETA TECHNOLOGIES - Buenos Aires,Buenos Aires,22,33,False,True
+383,147,CIPHER SYSTEMS - Detroit,Detroit,1,70,True,True
+384,147,CIPHER SYSTEMS - Manila,Manila,19,69,False,True
+853,319,GAMMA INDUSTRIES - Amsterdam,Amsterdam,8,16,True,True
+854,319,GAMMA INDUSTRIES - Milan,Milan,9,65,False,True
+250,91,ZENITH SEMICONDUCTORS - Austin,Austin,1,15,True,True
+251,91,ZENITH SEMICONDUCTORS - Detroit,Detroit,1,28,False,True
+252,91,ZENITH SEMICONDUCTORS - Beijing,Beijing,11,58,False,True
+253,91,ZENITH SEMICONDUCTORS - Singapore,Singapore,18,52,False,True
+755,279,DRIFT INDUSTRIES - Stuttgart,Stuttgart,5,45,True,True
+756,279,DRIFT INDUSTRIES - Osaka,Osaka,12,59,False,True
+757,279,DRIFT INDUSTRIES - Ho Chi Minh City,Ho Chi Minh City,16,25,False,True
+758,279,DRIFT INDUSTRIES - Hanoi,Hanoi,16,32,False,True
+759,279,DRIFT INDUSTRIES - Manila,Manila,19,20,False,True
+907,341,THETA SEMICONDUCTORS - Hanoi,Hanoi,16,50,True,True
+908,341,THETA SEMICONDUCTORS - Manila,Manila,19,69,False,True
+102,40,VERTEX MANUFACTURING - Munich,Munich,5,25,True,True
+103,40,VERTEX MANUFACTURING - Warsaw,Warsaw,10,39,False,True
+104,40,VERTEX MANUFACTURING - Shanghai,Shanghai,11,60,False,True
+105,40,VERTEX MANUFACTURING - Shenzhen,Shenzhen,11,33,False,True
+106,40,VERTEX MANUFACTURING - Manila,Manila,19,27,False,True
+107,40,VERTEX MANUFACTURING - Jakarta,Jakarta,20,14,False,True
+1172,432,CRYO COMPONENTS - Detroit,Detroit,1,56,True,True
+1173,432,CRYO COMPONENTS - Shanghai,Shanghai,11,48,False,True
+1174,432,CRYO COMPONENTS - Tokyo,Tokyo,12,19,False,True
+1175,432,CRYO COMPONENTS - Seoul,Seoul,13,31,False,True
+1176,432,CRYO COMPONENTS - Bogota,Bogota,23,44,False,True
+27,12,BLUEFORGE COMPONENTS - Paris,Paris,6,18,True,True
+259,93,ZENITH MATERIALS - Toronto,Toronto,2,68,True,True
+332,127,ATLAS SYSTEMS - Monterrey,Monterrey,3,21,True,True
+333,127,ATLAS SYSTEMS - Shenzhen,Shenzhen,11,56,False,True
+334,127,ATLAS SYSTEMS - Osaka,Osaka,12,26,False,True
+456,174,IONIC ELECTRONICS - Monterrey,Monterrey,3,30,True,True
+457,174,IONIC ELECTRONICS - Shenzhen,Shenzhen,11,35,False,True
+1107,409,TORUS INDUSTRIES - Milan,Milan,9,63,True,True
+1108,409,TORUS INDUSTRIES - Osaka,Osaka,12,72,False,True
+1109,409,TORUS INDUSTRIES - Chennai,Chennai,21,33,False,True
+446,168,FLUX SOLUTIONS - Shanghai,Shanghai,11,45,True,True
+177,66,APEX PRECISION - Osaka,Osaka,12,15,True,True
+178,66,APEX PRECISION - Penang,Penang,15,22,False,True
+179,66,APEX PRECISION - Kuala Lumpur,Kuala Lumpur,15,53,False,True
+180,66,APEX PRECISION - Manila,Manila,19,27,False,True
+42,19,BLUEFORGE INDUSTRIES - San Jose,San Jose,1,47,True,True
+43,19,BLUEFORGE INDUSTRIES - Sao Paulo,Sao Paulo,4,60,False,True
+655,244,MATRIX ELECTRONICS - Paris,Paris,6,66,True,True
+656,244,MATRIX ELECTRONICS - Amsterdam,Amsterdam,8,39,False,True
+321,120,PRISM MANUFACTURING - Hsinchu,Hsinchu,14,18,True,True
+322,120,PRISM MANUFACTURING - Bangkok,Bangkok,17,44,False,True
+848,316,GAMMA PRECISION - Guadalajara,Guadalajara,3,22,True,True
+849,316,GAMMA PRECISION - Munich,Munich,5,33,False,True
+850,316,GAMMA PRECISION - Warsaw,Warsaw,10,16,False,True
+851,316,GAMMA PRECISION - Kuala Lumpur,Kuala Lumpur,15,27,False,True
+237,87,TITAN SYSTEMS - Guadalajara,Guadalajara,3,45,True,True
+238,87,TITAN SYSTEMS - Osaka,Osaka,12,39,False,True
+239,87,TITAN SYSTEMS - Santiago,Santiago,24,21,False,True
+19,6,NEXORA PRECISION - Jakarta,Jakarta,20,73,True,True
+1129,415,NEXUS TECHNOLOGIES - Osaka,Osaka,12,35,True,True
+219,82,TITAN COMPONENTS - Shenzhen,Shenzhen,11,19,True,True
+220,82,TITAN COMPONENTS - Penang,Penang,15,59,False,True
+301,112,PRISM COMPONENTS - Austin,Austin,1,63,True,True
+302,112,PRISM COMPONENTS - Paris,Paris,6,63,False,True
+303,112,PRISM COMPONENTS - Warsaw,Warsaw,10,55,False,True
+489,185,VORTEX TECHNOLOGIES - Bangalore,Bangalore,21,54,True,True
+886,334,KAPPA ELECTRONICS - Shenzhen,Shenzhen,11,21,True,True
+887,334,KAPPA ELECTRONICS - Osaka,Osaka,12,69,False,True
+326,123,ATLAS MATERIALS - Bogota,Bogota,23,15,True,True
+120,45,SOLARIS TECHNOLOGIES - Shenzhen,Shenzhen,11,41,True,True
+1086,399,IOTA INDUSTRIES - Tokyo,Tokyo,12,16,True,True
+304,113,PRISM MATERIALS - Penang,Penang,15,34,True,True
+305,113,PRISM MATERIALS - Singapore,Singapore,18,65,False,True
+1056,387,LAMBDA SYSTEMS - Monterrey,Monterrey,3,41,True,True
+1057,387,LAMBDA SYSTEMS - Suzhou,Suzhou,11,32,False,True
+1058,387,LAMBDA SYSTEMS - Chennai,Chennai,21,15,False,True
+991,367,BETA SYSTEMS - Sao Paulo,Sao Paulo,4,23,True,True
+992,367,BETA SYSTEMS - Ho Chi Minh City,Ho Chi Minh City,16,43,False,True
+198,75,ORION TECHNOLOGIES - San Jose,San Jose,1,34,True,True
+199,75,ORION TECHNOLOGIES - Shenzhen,Shenzhen,11,44,False,True
+200,75,ORION TECHNOLOGIES - Hanoi,Hanoi,16,22,False,True
+664,248,MATRIX SOLUTIONS - Munich,Munich,5,61,True,True
+665,248,MATRIX SOLUTIONS - Shenzhen,Shenzhen,11,41,False,True
+666,248,MATRIX SOLUTIONS - Dongguan,Dongguan,11,59,False,True
+390,150,CIPHER MANUFACTURING - Monterrey,Monterrey,3,65,True,True
+391,150,CIPHER MANUFACTURING - Guadalajara,Guadalajara,3,52,False,True
+392,150,CIPHER MANUFACTURING - Sao Paulo,Sao Paulo,4,49,False,True
+393,150,CIPHER MANUFACTURING - Taichung,Taichung,14,35,False,True
+394,150,CIPHER MANUFACTURING - Buenos Aires,Buenos Aires,22,33,False,True
+535,200,STELLAR MANUFACTURING - Kuala Lumpur,Kuala Lumpur,15,29,True,True
+536,200,STELLAR MANUFACTURING - Bangkok,Bangkok,17,32,False,True
+513,193,STELLAR MATERIALS - Monterrey,Monterrey,3,72,True,True
+514,193,STELLAR MATERIALS - Suzhou,Suzhou,11,30,False,True
+515,193,STELLAR MATERIALS - Bangkok,Bangkok,17,15,False,True
+118,44,SOLARIS ELECTRONICS - Beijing,Beijing,11,21,True,True
+119,44,SOLARIS ELECTRONICS - Kuala Lumpur,Kuala Lumpur,15,32,False,True
+1014,374,EPSILON ELECTRONICS - Austin,Austin,1,17,True,True
+1015,374,EPSILON ELECTRONICS - Paris,Paris,6,52,False,True
+1016,374,EPSILON ELECTRONICS - Shanghai,Shanghai,11,23,False,True
+1017,374,EPSILON ELECTRONICS - Tokyo,Tokyo,12,66,False,True
+1018,374,EPSILON ELECTRONICS - Hsinchu,Hsinchu,14,40,False,True
+540,203,CREST MATERIALS - Milan,Milan,9,55,True,True
+541,203,CREST MATERIALS - Suzhou,Suzhou,11,62,False,True
+542,203,CREST MATERIALS - Ho Chi Minh City,Ho Chi Minh City,16,67,False,True
+817,300,SIGMA MANUFACTURING - Warsaw,Warsaw,10,24,True,True
+558,209,CREST INDUSTRIES - Shanghai,Shanghai,11,28,True,True
+559,209,CREST INDUSTRIES - Beijing,Beijing,11,32,False,True
+560,209,CREST INDUSTRIES - Taichung,Taichung,14,33,False,True
+561,209,CREST INDUSTRIES - Hanoi,Hanoi,16,22,False,True
+562,209,CREST INDUSTRIES - Chennai,Chennai,21,34,False,True
+175,65,APEX TECHNOLOGIES - Shanghai,Shanghai,11,36,True,True
+176,65,APEX TECHNOLOGIES - Osaka,Osaka,12,55,False,True
+331,125,ATLAS TECHNOLOGIES - Tokyo,Tokyo,12,14,True,True
+587,218,LUNAR SOLUTIONS - Detroit,Detroit,1,66,True,True
+588,218,LUNAR SOLUTIONS - Beijing,Beijing,11,42,False,True
+589,218,LUNAR SOLUTIONS - Dongguan,Dongguan,11,46,False,True
+296,109,NOVA INDUSTRIES - Beijing,Beijing,11,72,True,True
+297,109,NOVA INDUSTRIES - Singapore,Singapore,18,58,False,True
+285,104,NOVA ELECTRONICS - Dongguan,Dongguan,11,43,True,True
+464,177,IONIC SYSTEMS - Dongguan,Dongguan,11,41,True,True
+465,177,IONIC SYSTEMS - Taichung,Taichung,14,60,False,True
+694,258,SYNTH SOLUTIONS - San Jose,San Jose,1,17,True,True
+695,258,SYNTH SOLUTIONS - Guadalajara,Guadalajara,3,48,False,True
+696,258,SYNTH SOLUTIONS - Penang,Penang,15,63,False,True
+697,258,SYNTH SOLUTIONS - Buenos Aires,Buenos Aires,22,42,False,True
+10,3,NEXORA MATERIALS - Amsterdam,Amsterdam,8,26,True,True
+11,3,NEXORA MATERIALS - Suzhou,Suzhou,11,61,False,True
+12,3,NEXORA MATERIALS - Ho Chi Minh City,Ho Chi Minh City,16,22,False,True
+13,3,NEXORA MATERIALS - Singapore,Singapore,18,25,False,True
+14,3,NEXORA MATERIALS - Bogota,Bogota,23,56,False,True
+15,3,NEXORA MATERIALS - Santiago,Santiago,24,71,False,True
+855,320,GAMMA MANUFACTURING - Warsaw,Warsaw,10,66,True,True
+856,320,GAMMA MANUFACTURING - Shenzhen,Shenzhen,11,26,False,True
+857,320,GAMMA MANUFACTURING - Hanoi,Hanoi,16,22,False,True
+642,240,AETHER MANUFACTURING - Munich,Munich,5,19,True,True
+643,240,AETHER MANUFACTURING - Stuttgart,Stuttgart,5,56,False,True
+644,240,AETHER MANUFACTURING - Dongguan,Dongguan,11,38,False,True
+645,240,AETHER MANUFACTURING - Kuala Lumpur,Kuala Lumpur,15,39,False,True
+646,240,AETHER MANUFACTURING - Bangkok,Bangkok,17,40,False,True
+379,145,CIPHER TECHNOLOGIES - Austin,Austin,1,54,True,True
+380,145,CIPHER TECHNOLOGIES - Guadalajara,Guadalajara,3,31,False,True
+897,338,KAPPA SOLUTIONS - Milan,Milan,9,54,True,True
+898,338,KAPPA SOLUTIONS - Warsaw,Warsaw,10,44,False,True
+899,338,KAPPA SOLUTIONS - Ho Chi Minh City,Ho Chi Minh City,16,32,False,True
+888,335,KAPPA TECHNOLOGIES - Stuttgart,Stuttgart,5,49,True,True
+889,335,KAPPA TECHNOLOGIES - Amsterdam,Amsterdam,8,51,False,True
+890,335,KAPPA TECHNOLOGIES - Seoul,Seoul,13,20,False,True
+835,310,DELTA MANUFACTURING - Detroit,Detroit,1,57,True,True
+836,310,DELTA MANUFACTURING - Beijing,Beijing,11,17,False,True
+837,310,DELTA MANUFACTURING - Seoul,Seoul,13,29,False,True
+838,310,DELTA MANUFACTURING - Singapore,Singapore,18,60,False,True
+963,356,ALPHA PRECISION - Guadalajara,Guadalajara,3,62,True,True
+964,356,ALPHA PRECISION - Paris,Paris,6,18,False,True
+965,356,ALPHA PRECISION - Shenzhen,Shenzhen,11,23,False,True
+966,356,ALPHA PRECISION - Penang,Penang,15,14,False,True
+1139,421,PYRO SEMICONDUCTORS - Munich,Munich,5,65,True,True
+1140,421,PYRO SEMICONDUCTORS - Shenzhen,Shenzhen,11,15,False,True
+1141,421,PYRO SEMICONDUCTORS - Penang,Penang,15,14,False,True
+1142,421,PYRO SEMICONDUCTORS - Hanoi,Hanoi,16,49,False,True
+162,63,APEX MATERIALS - San Jose,San Jose,1,44,True,True
+163,63,APEX MATERIALS - Stuttgart,Stuttgart,5,44,False,True
+164,63,APEX MATERIALS - Paris,Paris,6,33,False,True
+165,63,APEX MATERIALS - Shenzhen,Shenzhen,11,60,False,True
+166,63,APEX MATERIALS - Seoul,Seoul,13,42,False,True
+1166,430,PYRO MANUFACTURING - Shanghai,Shanghai,11,38,True,True
+1167,430,PYRO MANUFACTURING - Hanoi,Hanoi,16,28,False,True
+962,355,ALPHA TECHNOLOGIES - Osaka,Osaka,12,34,True,True
+260,94,ZENITH ELECTRONICS - Bangalore,Bangalore,21,57,True,True
+136,52,QUANTUM COMPONENTS - Stuttgart,Stuttgart,5,26,True,True
+137,52,QUANTUM COMPONENTS - Shenzhen,Shenzhen,11,56,False,True
+138,52,QUANTUM COMPONENTS - Dongguan,Dongguan,11,22,False,True
+800,294,SIGMA ELECTRONICS - Tokyo,Tokyo,12,47,True,True
+624,232,AETHER COMPONENTS - Detroit,Detroit,1,20,True,True
+625,232,AETHER COMPONENTS - London,London,7,68,False,True
+626,232,AETHER COMPONENTS - Bangkok,Bangkok,17,21,False,True
+143,55,QUANTUM TECHNOLOGIES - Stuttgart,Stuttgart,5,66,True,True
+167,64,APEX ELECTRONICS - Detroit,Detroit,1,60,True,True
+168,64,APEX ELECTRONICS - Monterrey,Monterrey,3,42,False,True
+169,64,APEX ELECTRONICS - Munich,Munich,5,67,False,True
+170,64,APEX ELECTRONICS - Amsterdam,Amsterdam,8,35,False,True
+171,64,APEX ELECTRONICS - Shenzhen,Shenzhen,11,66,False,True
+172,64,APEX ELECTRONICS - Tokyo,Tokyo,12,59,False,True
+173,64,APEX ELECTRONICS - Bangkok,Bangkok,17,21,False,True
+174,64,APEX ELECTRONICS - Chennai,Chennai,21,29,False,True
+33,15,BLUEFORGE TECHNOLOGIES - Monterrey,Monterrey,3,30,True,True
+34,15,BLUEFORGE TECHNOLOGIES - Taichung,Taichung,14,66,False,True
+750,276,DRIFT PRECISION - London,London,7,47,True,True
+751,276,DRIFT PRECISION - Taichung,Taichung,14,18,False,True
+1181,435,CRYO TECHNOLOGIES - London,London,7,50,True,True
+1182,435,CRYO TECHNOLOGIES - Milan,Milan,9,47,False,True
+1183,435,CRYO TECHNOLOGIES - Dongguan,Dongguan,11,68,False,True
+1184,435,CRYO TECHNOLOGIES - Tokyo,Tokyo,12,24,False,True
+430,163,FLUX MATERIALS - Guadalajara,Guadalajara,3,52,True,True
+431,163,FLUX MATERIALS - Singapore,Singapore,18,52,False,True
+1195,439,CRYO INDUSTRIES - Sao Paulo,Sao Paulo,4,45,True,True
+1196,439,CRYO INDUSTRIES - Bogota,Bogota,23,62,False,True
+627,233,AETHER MATERIALS - Guadalajara,Guadalajara,3,63,True,True
+628,233,AETHER MATERIALS - Seoul,Seoul,13,61,False,True
+629,233,AETHER MATERIALS - Manila,Manila,19,17,False,True
+971,359,ALPHA INDUSTRIES - Milan,Milan,9,49,True,True
+972,359,ALPHA INDUSTRIES - Suzhou,Suzhou,11,58,False,True
+973,359,ALPHA INDUSTRIES - Chennai,Chennai,21,47,False,True
+974,359,ALPHA INDUSTRIES - Pune,Pune,21,59,False,True
+810,298,SIGMA SOLUTIONS - Sao Paulo,Sao Paulo,4,65,True,True
+811,298,SIGMA SOLUTIONS - Hsinchu,Hsinchu,14,30,False,True
+812,298,SIGMA SOLUTIONS - Pune,Pune,21,56,False,True
+1189,437,CRYO SYSTEMS - Beijing,Beijing,11,67,True,True
+1190,437,CRYO SYSTEMS - Seoul,Seoul,13,35,False,True
+1191,437,CRYO SYSTEMS - Kuala Lumpur,Kuala Lumpur,15,19,False,True
+1192,437,CRYO SYSTEMS - Singapore,Singapore,18,70,False,True
+1193,437,CRYO SYSTEMS - Bangalore,Bangalore,21,49,False,True
+773,284,OMEGA ELECTRONICS - London,London,7,72,True,True
+774,284,OMEGA ELECTRONICS - Suzhou,Suzhou,11,70,False,True
+775,284,OMEGA ELECTRONICS - Bangkok,Bangkok,17,29,False,True
+32,14,BLUEFORGE ELECTRONICS - Beijing,Beijing,11,72,True,True
+20,7,NEXORA SYSTEMS - Stuttgart,Stuttgart,5,69,True,True
+801,295,SIGMA TECHNOLOGIES - Hanoi,Hanoi,16,61,True,True
+802,295,SIGMA TECHNOLOGIES - Pune,Pune,21,42,False,True
+1023,377,EPSILON SYSTEMS - Dongguan,Dongguan,11,66,True,True
+95,38,VERTEX SOLUTIONS - Austin,Austin,1,33,True,True
+96,38,VERTEX SOLUTIONS - Guadalajara,Guadalajara,3,26,False,True
+97,38,VERTEX SOLUTIONS - Sao Paulo,Sao Paulo,4,16,False,True
+98,38,VERTEX SOLUTIONS - Kuala Lumpur,Kuala Lumpur,15,20,False,True
+99,38,VERTEX SOLUTIONS - Bangalore,Bangalore,21,50,False,True
+1087,400,IOTA MANUFACTURING - Milan,Milan,9,49,True,True
+1088,400,IOTA MANUFACTURING - Shanghai,Shanghai,11,40,False,True
+1089,400,IOTA MANUFACTURING - Hsinchu,Hsinchu,14,65,False,True
+573,213,LUNAR MATERIALS - Singapore,Singapore,18,19,True,True
+574,213,LUNAR MATERIALS - Santiago,Santiago,24,25,False,True
+72,30,PENTAWAVE MANUFACTURING - Detroit,Detroit,1,18,True,True
+73,30,PENTAWAVE MANUFACTURING - Paris,Paris,6,26,False,True
+74,30,PENTAWAVE MANUFACTURING - Amsterdam,Amsterdam,8,51,False,True
+75,30,PENTAWAVE MANUFACTURING - Bangkok,Bangkok,17,50,False,True
+478,182,VORTEX COMPONENTS - Austin,Austin,1,22,True,True
+479,182,VORTEX COMPONENTS - Paris,Paris,6,46,False,True
+480,182,VORTEX COMPONENTS - Seoul,Seoul,13,56,False,True
+481,182,VORTEX COMPONENTS - Hsinchu,Hsinchu,14,45,False,True
+482,182,VORTEX COMPONENTS - Hanoi,Hanoi,16,56,False,True
+483,182,VORTEX COMPONENTS - Manila,Manila,19,33,False,True
+361,138,ECHO SOLUTIONS - Dongguan,Dongguan,11,69,True,True
+916,344,THETA ELECTRONICS - Monterrey,Monterrey,3,24,True,True
+917,344,THETA ELECTRONICS - Taichung,Taichung,14,66,False,True
+1019,375,EPSILON TECHNOLOGIES - Monterrey,Monterrey,3,61,True,True
+1020,375,EPSILON TECHNOLOGIES - Kuala Lumpur,Kuala Lumpur,15,20,False,True
+937,349,THETA INDUSTRIES - Detroit,Detroit,1,30,True,True
+938,349,THETA INDUSTRIES - Osaka,Osaka,12,26,False,True
+939,349,THETA INDUSTRIES - Penang,Penang,15,64,False,True
+940,349,THETA INDUSTRIES - Ho Chi Minh City,Ho Chi Minh City,16,62,False,True
+941,349,THETA INDUSTRIES - Manila,Manila,19,16,False,True
+942,349,THETA INDUSTRIES - Pune,Pune,21,31,False,True
+439,166,FLUX PRECISION - Monterrey,Monterrey,3,50,True,True
+440,166,FLUX PRECISION - Amsterdam,Amsterdam,8,54,False,True
+441,166,FLUX PRECISION - Suzhou,Suzhou,11,47,False,True
+442,166,FLUX PRECISION - Manila,Manila,19,17,False,True
+443,166,FLUX PRECISION - Pune,Pune,21,72,False,True
+970,358,ALPHA SOLUTIONS - San Jose,San Jose,1,57,True,True
+452,172,IONIC COMPONENTS - Tokyo,Tokyo,12,65,True,True
+453,172,IONIC COMPONENTS - Bangkok,Bangkok,17,66,False,True
+860,322,ZETA COMPONENTS - Detroit,Detroit,1,28,True,True
+861,322,ZETA COMPONENTS - Milan,Milan,9,28,False,True
+226,84,TITAN ELECTRONICS - Seoul,Seoul,13,62,True,True
+1095,403,TORUS MATERIALS - Detroit,Detroit,1,70,True,True
+1096,403,TORUS MATERIALS - Milan,Milan,9,61,False,True
+1097,403,TORUS MATERIALS - Santiago,Santiago,24,25,False,True
+352,134,ECHO ELECTRONICS - Seoul,Seoul,13,71,True,True
+353,134,ECHO ELECTRONICS - Manila,Manila,19,34,False,True
+346,133,ECHO MATERIALS - Sao Paulo,Sao Paulo,4,23,True,True
+347,133,ECHO MATERIALS - Paris,Paris,6,14,False,True
+348,133,ECHO MATERIALS - Shanghai,Shanghai,11,69,False,True
+349,133,ECHO MATERIALS - Seoul,Seoul,13,40,False,True
+350,133,ECHO MATERIALS - Hsinchu,Hsinchu,14,41,False,True
+351,133,ECHO MATERIALS - Bogota,Bogota,23,63,False,True
+69,29,PENTAWAVE INDUSTRIES - Sao Paulo,Sao Paulo,4,59,True,True
+70,29,PENTAWAVE INDUSTRIES - Milan,Milan,9,19,False,True
+71,29,PENTAWAVE INDUSTRIES - Tokyo,Tokyo,12,24,False,True
+1146,423,PYRO MATERIALS - Shenzhen,Shenzhen,11,50,True,True
+1147,423,PYRO MATERIALS - Jakarta,Jakarta,20,47,False,True
+474,181,VORTEX SEMICONDUCTORS - Taichung,Taichung,14,16,True,True
+475,181,VORTEX SEMICONDUCTORS - Kuala Lumpur,Kuala Lumpur,15,37,False,True
+476,181,VORTEX SEMICONDUCTORS - Singapore,Singapore,18,15,False,True
+477,181,VORTEX SEMICONDUCTORS - Bogota,Bogota,23,67,False,True
+796,293,SIGMA MATERIALS - Monterrey,Monterrey,3,49,True,True
+797,293,SIGMA MATERIALS - Shanghai,Shanghai,11,32,False,True
+798,293,SIGMA MATERIALS - Taichung,Taichung,14,31,False,True
+799,293,SIGMA MATERIALS - Bogota,Bogota,23,56,False,True
+705,261,PULSE SEMICONDUCTORS - Kuala Lumpur,Kuala Lumpur,15,62,True,True
+706,261,PULSE SEMICONDUCTORS - Ho Chi Minh City,Ho Chi Minh City,16,53,False,True
+544,205,CREST TECHNOLOGIES - Amsterdam,Amsterdam,8,52,True,True
+545,205,CREST TECHNOLOGIES - Warsaw,Warsaw,10,54,False,True
+546,205,CREST TECHNOLOGIES - Shanghai,Shanghai,11,58,False,True
+547,205,CREST TECHNOLOGIES - Dongguan,Dongguan,11,63,False,True
+548,205,CREST TECHNOLOGIES - Hsinchu,Hsinchu,14,55,False,True
+839,311,GAMMA SEMICONDUCTORS - Guadalajara,Guadalajara,3,42,True,True
+840,311,GAMMA SEMICONDUCTORS - Sao Paulo,Sao Paulo,4,46,False,True
+841,311,GAMMA SEMICONDUCTORS - Hanoi,Hanoi,16,62,False,True
+1177,433,CRYO MATERIALS - Osaka,Osaka,12,25,True,True
+1178,433,CRYO MATERIALS - Ho Chi Minh City,Ho Chi Minh City,16,55,False,True
+185,69,APEX INDUSTRIES - Austin,Austin,1,71,True,True
+186,69,APEX INDUSTRIES - Toronto,Toronto,2,36,False,True
+187,69,APEX INDUSTRIES - Guadalajara,Guadalajara,3,53,False,True
+188,69,APEX INDUSTRIES - Suzhou,Suzhou,11,63,False,True
+852,317,GAMMA SYSTEMS - Beijing,Beijing,11,50,True,True
+36,17,BLUEFORGE SYSTEMS - San Jose,San Jose,1,30,True,True
+37,17,BLUEFORGE SYSTEMS - Stuttgart,Stuttgart,5,16,False,True
+38,17,BLUEFORGE SYSTEMS - Chennai,Chennai,21,53,False,True
+39,17,BLUEFORGE SYSTEMS - Santiago,Santiago,24,49,False,True
+894,337,KAPPA SYSTEMS - Detroit,Detroit,1,73,True,True
+895,337,KAPPA SYSTEMS - Milan,Milan,9,38,False,True
+896,337,KAPPA SYSTEMS - Ho Chi Minh City,Ho Chi Minh City,16,38,False,True
+145,57,QUANTUM SYSTEMS - Monterrey,Monterrey,3,59,True,True
+146,57,QUANTUM SYSTEMS - Kuala Lumpur,Kuala Lumpur,15,64,False,True
+693,257,SYNTH SYSTEMS - Santiago,Santiago,24,55,True,True
+313,116,PRISM PRECISION - Toronto,Toronto,2,45,True,True
+314,116,PRISM PRECISION - Bogota,Bogota,23,36,False,True
+244,89,TITAN INDUSTRIES - Paris,Paris,6,62,True,True
+245,89,TITAN INDUSTRIES - Penang,Penang,15,52,False,True
+246,89,TITAN INDUSTRIES - Bogota,Bogota,23,21,False,True
+139,54,QUANTUM ELECTRONICS - Monterrey,Monterrey,3,15,True,True
+140,54,QUANTUM ELECTRONICS - London,London,7,31,False,True
+141,54,QUANTUM ELECTRONICS - Dongguan,Dongguan,11,46,False,True
+142,54,QUANTUM ELECTRONICS - Bogota,Bogota,23,73,False,True
+593,220,LUNAR MANUFACTURING - Bogota,Bogota,23,27,True,True
+1168,431,CRYO SEMICONDUCTORS - Seoul,Seoul,13,40,True,True
+1169,431,CRYO SEMICONDUCTORS - Singapore,Singapore,18,73,False,True
+1170,431,CRYO SEMICONDUCTORS - Manila,Manila,19,25,False,True
+1171,431,CRYO SEMICONDUCTORS - Buenos Aires,Buenos Aires,22,33,False,True
+247,90,TITAN MANUFACTURING - Monterrey,Monterrey,3,51,True,True
+248,90,TITAN MANUFACTURING - Stuttgart,Stuttgart,5,62,False,True
+249,90,TITAN MANUFACTURING - Hsinchu,Hsinchu,14,17,False,True
+605,225,COBALT TECHNOLOGIES - Austin,Austin,1,60,True,True
+606,225,COBALT TECHNOLOGIES - London,London,7,37,False,True
+607,225,COBALT TECHNOLOGIES - Penang,Penang,15,58,False,True
+1052,386,LAMBDA PRECISION - Toronto,Toronto,2,39,True,True
+1053,386,LAMBDA PRECISION - Sao Paulo,Sao Paulo,4,50,False,True
+1054,386,LAMBDA PRECISION - Milan,Milan,9,60,False,True
+1055,386,LAMBDA PRECISION - Suzhou,Suzhou,11,24,False,True
+590,219,LUNAR INDUSTRIES - Tokyo,Tokyo,12,21,True,True
+591,219,LUNAR INDUSTRIES - Seoul,Seoul,13,73,False,True
+592,219,LUNAR INDUSTRIES - Kuala Lumpur,Kuala Lumpur,15,69,False,True
+81,32,VERTEX COMPONENTS - San Jose,San Jose,1,70,True,True
+82,32,VERTEX COMPONENTS - Seoul,Seoul,13,31,False,True
+83,32,VERTEX COMPONENTS - Buenos Aires,Buenos Aires,22,58,False,True
+502,190,VORTEX MANUFACTURING - San Jose,San Jose,1,28,True,True
+503,190,VORTEX MANUFACTURING - Milan,Milan,9,67,False,True
+504,190,VORTEX MANUFACTURING - Warsaw,Warsaw,10,49,False,True
+505,190,VORTEX MANUFACTURING - Shenzhen,Shenzhen,11,44,False,True
+325,122,ATLAS COMPONENTS - Chennai,Chennai,21,21,True,True
+924,346,THETA PRECISION - Austin,Austin,1,59,True,True
+925,346,THETA PRECISION - Tokyo,Tokyo,12,20,False,True
+926,346,THETA PRECISION - Chennai,Chennai,21,22,False,True
+927,346,THETA PRECISION - Pune,Pune,21,42,False,True
+928,346,THETA PRECISION - Buenos Aires,Buenos Aires,22,35,False,True
+1059,388,LAMBDA SOLUTIONS - Taichung,Taichung,14,26,True,True
+1060,388,LAMBDA SOLUTIONS - Singapore,Singapore,18,57,False,True
+144,56,QUANTUM PRECISION - Seoul,Seoul,13,47,True,True
+269,100,ZENITH MANUFACTURING - Austin,Austin,1,49,True,True
+270,100,ZENITH MANUFACTURING - Detroit,Detroit,1,41,False,True
+271,100,ZENITH MANUFACTURING - Paris,Paris,6,32,False,True
+272,100,ZENITH MANUFACTURING - Dongguan,Dongguan,11,54,False,True
+273,100,ZENITH MANUFACTURING - Chennai,Chennai,21,44,False,True
+274,100,ZENITH MANUFACTURING - Santiago,Santiago,24,42,False,True
+784,287,OMEGA SYSTEMS - Warsaw,Warsaw,10,67,True,True
+785,287,OMEGA SYSTEMS - Hsinchu,Hsinchu,14,40,False,True
+1197,440,CRYO MANUFACTURING - Sao Paulo,Sao Paulo,4,68,True,True
+1198,440,CRYO MANUFACTURING - Hsinchu,Hsinchu,14,27,False,True
+1199,440,CRYO MANUFACTURING - Buenos Aires,Buenos Aires,22,19,False,True
+958,353,ALPHA MATERIALS - Austin,Austin,1,17,True,True
+959,353,ALPHA MATERIALS - Munich,Munich,5,54,False,True
+960,353,ALPHA MATERIALS - Buenos Aires,Buenos Aires,22,15,False,True
+265,98,ZENITH SOLUTIONS - Shenzhen,Shenzhen,11,41,True,True
+266,98,ZENITH SOLUTIONS - Hanoi,Hanoi,16,26,False,True
+267,98,ZENITH SOLUTIONS - Jakarta,Jakarta,20,51,False,True
+845,314,GAMMA ELECTRONICS - Shenzhen,Shenzhen,11,59,True,True
+846,314,GAMMA ELECTRONICS - Pune,Pune,21,34,False,True
+395,151,HELIX SEMICONDUCTORS - Detroit,Detroit,1,26,True,True
+396,151,HELIX SEMICONDUCTORS - Toronto,Toronto,2,51,False,True
+397,151,HELIX SEMICONDUCTORS - Hsinchu,Hsinchu,14,21,False,True
+209,79,ORION INDUSTRIES - London,London,7,51,True,True
+210,79,ORION INDUSTRIES - Tokyo,Tokyo,12,73,False,True
+485,184,VORTEX ELECTRONICS - Dongguan,Dongguan,11,17,True,True
+486,184,VORTEX ELECTRONICS - Hsinchu,Hsinchu,14,17,False,True
+487,184,VORTEX ELECTRONICS - Hanoi,Hanoi,16,54,False,True
+488,184,VORTEX ELECTRONICS - Bogota,Bogota,23,38,False,True
+354,135,ECHO TECHNOLOGIES - Bangkok,Bangkok,17,52,True,True
+355,135,ECHO TECHNOLOGIES - Singapore,Singapore,18,72,False,True
+356,135,ECHO TECHNOLOGIES - Jakarta,Jakarta,20,64,False,True
+458,175,IONIC TECHNOLOGIES - Milan,Milan,9,44,True,True
+459,175,IONIC TECHNOLOGIES - Penang,Penang,15,41,False,True
+1063,391,IOTA SEMICONDUCTORS - Detroit,Detroit,1,21,True,True
+1064,391,IOTA SEMICONDUCTORS - Osaka,Osaka,12,41,False,True
+1065,391,IOTA SEMICONDUCTORS - Taichung,Taichung,14,66,False,True
+1066,391,IOTA SEMICONDUCTORS - Singapore,Singapore,18,56,False,True
+1067,391,IOTA SEMICONDUCTORS - Santiago,Santiago,24,26,False,True
+432,164,FLUX ELECTRONICS - Austin,Austin,1,49,True,True
+433,164,FLUX ELECTRONICS - San Jose,San Jose,1,42,False,True
+434,164,FLUX ELECTRONICS - Sao Paulo,Sao Paulo,4,33,False,True
+435,164,FLUX ELECTRONICS - Chennai,Chennai,21,54,False,True
+436,164,FLUX ELECTRONICS - Buenos Aires,Buenos Aires,22,65,False,True
+108,41,SOLARIS SEMICONDUCTORS - Milan,Milan,9,37,True,True
+109,41,SOLARIS SEMICONDUCTORS - Shenzhen,Shenzhen,11,32,False,True
+110,41,SOLARIS SEMICONDUCTORS - Hanoi,Hanoi,16,35,False,True
+875,328,ZETA SOLUTIONS - Munich,Munich,5,54,True,True
+876,328,ZETA SOLUTIONS - Santiago,Santiago,24,67,False,True
+549,206,CREST PRECISION - Paris,Paris,6,45,True,True
+550,206,CREST PRECISION - London,London,7,57,False,True
+551,206,CREST PRECISION - Jakarta,Jakarta,20,16,False,True
+552,206,CREST PRECISION - Santiago,Santiago,24,34,False,True
+298,110,NOVA MANUFACTURING - San Jose,San Jose,1,56,True,True
+299,110,NOVA MANUFACTURING - Dongguan,Dongguan,11,52,False,True
+300,110,NOVA MANUFACTURING - Tokyo,Tokyo,12,32,False,True
+610,227,COBALT SYSTEMS - Toronto,Toronto,2,34,True,True
+611,227,COBALT SYSTEMS - Monterrey,Monterrey,3,46,False,True
+612,227,COBALT SYSTEMS - Beijing,Beijing,11,70,False,True
+613,227,COBALT SYSTEMS - Bogota,Bogota,23,42,False,True
+315,117,PRISM SYSTEMS - Beijing,Beijing,11,34,True,True
+316,117,PRISM SYSTEMS - Suzhou,Suzhou,11,35,False,True
+317,117,PRISM SYSTEMS - Pune,Pune,21,25,False,True
+318,117,PRISM SYSTEMS - Santiago,Santiago,24,73,False,True
+768,283,OMEGA MATERIALS - Monterrey,Monterrey,3,71,True,True
+769,283,OMEGA MATERIALS - Shanghai,Shanghai,11,51,False,True
+770,283,OMEGA MATERIALS - Ho Chi Minh City,Ho Chi Minh City,16,43,False,True
+771,283,OMEGA MATERIALS - Chennai,Chennai,21,41,False,True
+772,283,OMEGA MATERIALS - Pune,Pune,21,53,False,True
+752,277,DRIFT SYSTEMS - Shanghai,Shanghai,11,32,True,True
+753,277,DRIFT SYSTEMS - Tokyo,Tokyo,12,68,False,True
+754,277,DRIFT SYSTEMS - Seoul,Seoul,13,66,False,True
+955,352,ALPHA COMPONENTS - Detroit,Detroit,1,46,True,True
+956,352,ALPHA COMPONENTS - Osaka,Osaka,12,35,False,True
+957,352,ALPHA COMPONENTS - Jakarta,Jakarta,20,21,False,True
+632,235,AETHER TECHNOLOGIES - Austin,Austin,1,17,True,True
+633,235,AETHER TECHNOLOGIES - Munich,Munich,5,33,False,True
+634,235,AETHER TECHNOLOGIES - Manila,Manila,19,22,False,True
+289,106,NOVA PRECISION - Stuttgart,Stuttgart,5,52,True,True
+290,106,NOVA PRECISION - Penang,Penang,15,42,False,True
+227,85,TITAN TECHNOLOGIES - Austin,Austin,1,39,True,True
+228,85,TITAN TECHNOLOGIES - San Jose,San Jose,1,64,False,True
+229,85,TITAN TECHNOLOGIES - Shenzhen,Shenzhen,11,29,False,True
+230,85,TITAN TECHNOLOGIES - Hanoi,Hanoi,16,48,False,True
+231,85,TITAN TECHNOLOGIES - Jakarta,Jakarta,20,56,False,True
+232,85,TITAN TECHNOLOGIES - Santiago,Santiago,24,73,False,True
+961,354,ALPHA ELECTRONICS - Pune,Pune,21,27,True,True
+984,364,BETA ELECTRONICS - Bogota,Bogota,23,51,True,True
+370,142,CIPHER COMPONENTS - Sao Paulo,Sao Paulo,4,39,True,True
+371,142,CIPHER COMPONENTS - Munich,Munich,5,62,False,True
+372,142,CIPHER COMPONENTS - Pune,Pune,21,50,False,True
+715,265,PULSE TECHNOLOGIES - Tokyo,Tokyo,12,72,True,True
+716,265,PULSE TECHNOLOGIES - Bangalore,Bangalore,21,73,False,True
+65,28,PENTAWAVE SOLUTIONS - Toronto,Toronto,2,73,True,True
+66,28,PENTAWAVE SOLUTIONS - Amsterdam,Amsterdam,8,25,False,True
+67,28,PENTAWAVE SOLUTIONS - Hanoi,Hanoi,16,17,False,True
+68,28,PENTAWAVE SOLUTIONS - Chennai,Chennai,21,67,False,True
+132,51,QUANTUM SEMICONDUCTORS - Toronto,Toronto,2,33,True,True
+133,51,QUANTUM SEMICONDUCTORS - Amsterdam,Amsterdam,8,24,False,True
+134,51,QUANTUM SEMICONDUCTORS - Chennai,Chennai,21,20,False,True
+135,51,QUANTUM SEMICONDUCTORS - Pune,Pune,21,57,False,True
+181,67,APEX SYSTEMS - Sao Paulo,Sao Paulo,4,43,True,True
+182,67,APEX SYSTEMS - Stuttgart,Stuttgart,5,62,False,True
+1162,429,PYRO INDUSTRIES - Guadalajara,Guadalajara,3,63,True,True
+1163,429,PYRO INDUSTRIES - Paris,Paris,6,49,False,True
+1164,429,PYRO INDUSTRIES - Penang,Penang,15,18,False,True
+1165,429,PYRO INDUSTRIES - Ho Chi Minh City,Ho Chi Minh City,16,29,False,True
+319,118,PRISM SOLUTIONS - Taichung,Taichung,14,41,True,True
+787,289,OMEGA INDUSTRIES - Munich,Munich,5,27,True,True
+788,289,OMEGA INDUSTRIES - Milan,Milan,9,29,False,True
+1047,385,LAMBDA TECHNOLOGIES - San Jose,San Jose,1,21,True,True
+1048,385,LAMBDA TECHNOLOGIES - Guadalajara,Guadalajara,3,68,False,True
+1049,385,LAMBDA TECHNOLOGIES - Stuttgart,Stuttgart,5,30,False,True
+1050,385,LAMBDA TECHNOLOGIES - Shanghai,Shanghai,11,16,False,True
+1051,385,LAMBDA TECHNOLOGIES - Taichung,Taichung,14,48,False,True
+575,214,LUNAR ELECTRONICS - Warsaw,Warsaw,10,71,True,True
+576,214,LUNAR ELECTRONICS - Pune,Pune,21,72,False,True
+818,301,DELTA SEMICONDUCTORS - San Jose,San Jose,1,37,True,True
+819,301,DELTA SEMICONDUCTORS - Tokyo,Tokyo,12,28,False,True
+1157,427,PYRO SYSTEMS - Osaka,Osaka,12,36,True,True
+1158,427,PYRO SYSTEMS - Penang,Penang,15,35,False,True
+1159,427,PYRO SYSTEMS - Chennai,Chennai,21,32,False,True
+900,339,KAPPA INDUSTRIES - Detroit,Detroit,1,63,True,True
+901,339,KAPPA INDUSTRIES - Munich,Munich,5,33,False,True
+902,339,KAPPA INDUSTRIES - Paris,Paris,6,73,False,True
+903,339,KAPPA INDUSTRIES - Seoul,Seoul,13,18,False,True
+904,339,KAPPA INDUSTRIES - Bogota,Bogota,23,40,False,True
+262,96,ZENITH PRECISION - Stuttgart,Stuttgart,5,45,True,True
+263,96,ZENITH PRECISION - Bangkok,Bangkok,17,60,False,True
+264,96,ZENITH PRECISION - Buenos Aires,Buenos Aires,22,36,False,True
+543,204,CREST ELECTRONICS - Warsaw,Warsaw,10,52,True,True
+90,36,VERTEX PRECISION - Penang,Penang,15,36,True,True
+294,108,NOVA SOLUTIONS - Dongguan,Dongguan,11,62,True,True
+295,108,NOVA SOLUTIONS - Tokyo,Tokyo,12,42,False,True
+658,246,MATRIX PRECISION - Guadalajara,Guadalajara,3,16,True,True
+659,246,MATRIX PRECISION - Warsaw,Warsaw,10,17,False,True
+660,246,MATRIX PRECISION - Buenos Aires,Buenos Aires,22,29,False,True
+531,198,STELLAR SOLUTIONS - Shenzhen,Shenzhen,11,55,True,True
+50,24,PENTAWAVE ELECTRONICS - Paris,Paris,6,69,True,True
+51,24,PENTAWAVE ELECTRONICS - Warsaw,Warsaw,10,64,False,True
+52,24,PENTAWAVE ELECTRONICS - Shanghai,Shanghai,11,36,False,True
+53,24,PENTAWAVE ELECTRONICS - Dongguan,Dongguan,11,63,False,True
+54,24,PENTAWAVE ELECTRONICS - Taichung,Taichung,14,20,False,True
+55,24,PENTAWAVE ELECTRONICS - Jakarta,Jakarta,20,44,False,True
+56,24,PENTAWAVE ELECTRONICS - Buenos Aires,Buenos Aires,22,46,False,True
+35,16,BLUEFORGE PRECISION - Bangalore,Bangalore,21,56,True,True
+467,179,IONIC INDUSTRIES - Sao Paulo,Sao Paulo,4,69,True,True
+468,179,IONIC INDUSTRIES - Amsterdam,Amsterdam,8,47,False,True
+469,179,IONIC INDUSTRIES - Milan,Milan,9,25,False,True
+470,179,IONIC INDUSTRIES - Warsaw,Warsaw,10,62,False,True
+471,179,IONIC INDUSTRIES - Dongguan,Dongguan,11,46,False,True
+1136,419,NEXUS INDUSTRIES - Detroit,Detroit,1,14,True,True
+1137,419,NEXUS INDUSTRIES - Guadalajara,Guadalajara,3,16,False,True
+1138,419,NEXUS INDUSTRIES - Munich,Munich,5,68,False,True
+5,2,NEXORA COMPONENTS - San Jose,San Jose,1,18,True,True
+6,2,NEXORA COMPONENTS - Suzhou,Suzhou,11,15,False,True
+7,2,NEXORA COMPONENTS - Ho Chi Minh City,Ho Chi Minh City,16,21,False,True
+8,2,NEXORA COMPONENTS - Singapore,Singapore,18,19,False,True
+9,2,NEXORA COMPONENTS - Bangalore,Bangalore,21,23,False,True
+233,86,TITAN PRECISION - Milan,Milan,9,18,True,True
+234,86,TITAN PRECISION - Taichung,Taichung,14,29,False,True
+235,86,TITAN PRECISION - Manila,Manila,19,17,False,True
+236,86,TITAN PRECISION - Pune,Pune,21,44,False,True
+712,264,PULSE ELECTRONICS - Warsaw,Warsaw,10,62,True,True
+713,264,PULSE ELECTRONICS - Shanghai,Shanghai,11,37,False,True
+714,264,PULSE ELECTRONICS - Penang,Penang,15,66,False,True
+466,178,IONIC SOLUTIONS - Munich,Munich,5,59,True,True
+506,191,STELLAR SEMICONDUCTORS - Sao Paulo,Sao Paulo,4,60,True,True
+507,191,STELLAR SEMICONDUCTORS - Dongguan,Dongguan,11,72,False,True
+508,191,STELLAR SEMICONDUCTORS - Seoul,Seoul,13,47,False,True
+509,191,STELLAR SEMICONDUCTORS - Taichung,Taichung,14,68,False,True
+510,191,STELLAR SEMICONDUCTORS - Bangkok,Bangkok,17,26,False,True
+1185,436,CRYO PRECISION - Paris,Paris,6,54,True,True
+1186,436,CRYO PRECISION - Beijing,Beijing,11,16,False,True
+1187,436,CRYO PRECISION - Suzhou,Suzhou,11,35,False,True
+1188,436,CRYO PRECISION - Bangalore,Bangalore,21,55,False,True
+1117,412,NEXUS COMPONENTS - Paris,Paris,6,14,True,True
+1118,412,NEXUS COMPONENTS - London,London,7,69,False,True
+1119,412,NEXUS COMPONENTS - Osaka,Osaka,12,23,False,True
+1120,412,NEXUS COMPONENTS - Santiago,Santiago,24,37,False,True
+484,183,VORTEX MATERIALS - Milan,Milan,9,18,True,True
+516,194,STELLAR ELECTRONICS - Warsaw,Warsaw,10,51,True,True
+517,194,STELLAR ELECTRONICS - Seoul,Seoul,13,73,False,True
+518,194,STELLAR ELECTRONICS - Manila,Manila,19,44,False,True
+1090,401,TORUS SEMICONDUCTORS - Austin,Austin,1,16,True,True
+1091,401,TORUS SEMICONDUCTORS - Beijing,Beijing,11,56,False,True
+1092,401,TORUS SEMICONDUCTORS - Bangkok,Bangkok,17,65,False,True
+1093,401,TORUS SEMICONDUCTORS - Bogota,Bogota,23,15,False,True
+357,136,ECHO PRECISION - Munich,Munich,5,30,True,True
+1094,402,TORUS COMPONENTS - Seoul,Seoul,13,72,True,True
+46,21,PENTAWAVE SEMICONDUCTORS - Guadalajara,Guadalajara,3,30,True,True
+183,68,APEX SOLUTIONS - Ho Chi Minh City,Ho Chi Minh City,16,44,True,True
+184,68,APEX SOLUTIONS - Bangalore,Bangalore,21,44,False,True
+511,192,STELLAR COMPONENTS - Sao Paulo,Sao Paulo,4,15,True,True
+512,192,STELLAR COMPONENTS - Bangalore,Bangalore,21,61,False,True
+1036,382,LAMBDA COMPONENTS - Beijing,Beijing,11,49,True,True
+1037,382,LAMBDA COMPONENTS - Hsinchu,Hsinchu,14,24,False,True
+1038,382,LAMBDA COMPONENTS - Buenos Aires,Buenos Aires,22,28,False,True
+44,20,BLUEFORGE MANUFACTURING - Milan,Milan,9,44,True,True
+45,20,BLUEFORGE MANUFACTURING - Jakarta,Jakarta,20,20,False,True
+727,269,PULSE INDUSTRIES - Detroit,Detroit,1,29,True,True
+728,269,PULSE INDUSTRIES - Munich,Munich,5,60,False,True
+729,269,PULSE INDUSTRIES - Milan,Milan,9,36,False,True
+730,269,PULSE INDUSTRIES - Kuala Lumpur,Kuala Lumpur,15,25,False,True
+731,269,PULSE INDUSTRIES - Ho Chi Minh City,Ho Chi Minh City,16,28,False,True
+681,253,SYNTH MATERIALS - Detroit,Detroit,1,18,True,True
+682,253,SYNTH MATERIALS - Paris,Paris,6,67,False,True
+683,253,SYNTH MATERIALS - Shenzhen,Shenzhen,11,24,False,True
+684,253,SYNTH MATERIALS - Hsinchu,Hsinchu,14,40,False,True
+16,4,NEXORA ELECTRONICS - Stuttgart,Stuttgart,5,71,True,True
+17,4,NEXORA ELECTRONICS - Beijing,Beijing,11,71,False,True
+47,22,PENTAWAVE COMPONENTS - Hanoi,Hanoi,16,51,True,True
+48,22,PENTAWAVE COMPONENTS - Buenos Aires,Buenos Aires,22,19,False,True
+594,221,COBALT SEMICONDUCTORS - San Jose,San Jose,1,31,True,True
+595,221,COBALT SEMICONDUCTORS - Beijing,Beijing,11,38,False,True
+596,221,COBALT SEMICONDUCTORS - Kuala Lumpur,Kuala Lumpur,15,73,False,True
+76,31,VERTEX SEMICONDUCTORS - Toronto,Toronto,2,39,True,True
+77,31,VERTEX SEMICONDUCTORS - Dongguan,Dongguan,11,54,False,True
+78,31,VERTEX SEMICONDUCTORS - Penang,Penang,15,58,False,True
+79,31,VERTEX SEMICONDUCTORS - Chennai,Chennai,21,20,False,True
+80,31,VERTEX SEMICONDUCTORS - Buenos Aires,Buenos Aires,22,73,False,True
+539,202,CREST COMPONENTS - Santiago,Santiago,24,47,True,True
+877,329,ZETA INDUSTRIES - Seoul,Seoul,13,32,True,True
+1143,422,PYRO COMPONENTS - Shanghai,Shanghai,11,32,True,True
+1144,422,PYRO COMPONENTS - Osaka,Osaka,12,38,False,True
+1145,422,PYRO COMPONENTS - Kuala Lumpur,Kuala Lumpur,15,23,False,True
+343,132,ECHO COMPONENTS - Warsaw,Warsaw,10,21,True,True
+344,132,ECHO COMPONENTS - Tokyo,Tokyo,12,68,False,True
+345,132,ECHO COMPONENTS - Manila,Manila,19,44,False,True
+152,60,QUANTUM MANUFACTURING - San Jose,San Jose,1,45,True,True
+153,60,QUANTUM MANUFACTURING - London,London,7,28,False,True
+154,60,QUANTUM MANUFACTURING - Milan,Milan,9,53,False,True
+155,60,QUANTUM MANUFACTURING - Taichung,Taichung,14,54,False,True
+156,60,QUANTUM MANUFACTURING - Ho Chi Minh City,Ho Chi Minh City,16,15,False,True
+734,271,DRIFT SEMICONDUCTORS - San Jose,San Jose,1,17,True,True
+735,271,DRIFT SEMICONDUCTORS - Sao Paulo,Sao Paulo,4,19,False,True
+221,83,TITAN MATERIALS - London,London,7,40,True,True
+222,83,TITAN MATERIALS - Warsaw,Warsaw,10,67,False,True
+223,83,TITAN MATERIALS - Taichung,Taichung,14,25,False,True
+224,83,TITAN MATERIALS - Jakarta,Jakarta,20,39,False,True
+225,83,TITAN MATERIALS - Bangalore,Bangalore,21,66,False,True
+600,224,COBALT ELECTRONICS - Munich,Munich,5,14,True,True
+601,224,COBALT ELECTRONICS - Shenzhen,Shenzhen,11,62,False,True
+602,224,COBALT ELECTRONICS - Kuala Lumpur,Kuala Lumpur,15,22,False,True
+603,224,COBALT ELECTRONICS - Bogota,Bogota,23,36,False,True
+604,224,COBALT ELECTRONICS - Santiago,Santiago,24,34,False,True
+532,199,STELLAR INDUSTRIES - Shenzhen,Shenzhen,11,33,True,True
+533,199,STELLAR INDUSTRIES - Hsinchu,Hsinchu,14,44,False,True
+534,199,STELLAR INDUSTRIES - Hanoi,Hanoi,16,69,False,True
+747,275,DRIFT TECHNOLOGIES - Austin,Austin,1,45,True,True
+748,275,DRIFT TECHNOLOGIES - Toronto,Toronto,2,66,False,True
+749,275,DRIFT TECHNOLOGIES - Bangkok,Bangkok,17,43,False,True
+918,345,THETA TECHNOLOGIES - Amsterdam,Amsterdam,8,67,True,True
+919,345,THETA TECHNOLOGIES - Warsaw,Warsaw,10,35,False,True
+920,345,THETA TECHNOLOGIES - Penang,Penang,15,34,False,True
+921,345,THETA TECHNOLOGIES - Buenos Aires,Buenos Aires,22,31,False,True
+922,345,THETA TECHNOLOGIES - Bogota,Bogota,23,29,False,True
+923,345,THETA TECHNOLOGIES - Santiago,Santiago,24,54,False,True
+866,324,ZETA ELECTRONICS - Detroit,Detroit,1,70,True,True
+867,324,ZETA ELECTRONICS - Shenzhen,Shenzhen,11,57,False,True
+868,324,ZETA ELECTRONICS - Santiago,Santiago,24,66,False,True
+862,323,ZETA MATERIALS - London,London,7,20,True,True
+863,323,ZETA MATERIALS - Amsterdam,Amsterdam,8,61,False,True
+864,323,ZETA MATERIALS - Shanghai,Shanghai,11,20,False,True
+865,323,ZETA MATERIALS - Pune,Pune,21,47,False,True
+704,260,SYNTH MANUFACTURING - Bogota,Bogota,23,30,True,True
+423,159,HELIX INDUSTRIES - Osaka,Osaka,12,38,True,True
+424,159,HELIX INDUSTRIES - Hsinchu,Hsinchu,14,64,False,True
+425,159,HELIX INDUSTRIES - Bogota,Bogota,23,54,False,True
+320,119,PRISM INDUSTRIES - Amsterdam,Amsterdam,8,19,True,True
+598,223,COBALT MATERIALS - Shenzhen,Shenzhen,11,16,True,True
+599,223,COBALT MATERIALS - Ho Chi Minh City,Ho Chi Minh City,16,57,False,True
+60,26,PENTAWAVE PRECISION - Stuttgart,Stuttgart,5,65,True,True
+61,26,PENTAWAVE PRECISION - Ho Chi Minh City,Ho Chi Minh City,16,55,False,True
+338,129,ATLAS INDUSTRIES - Toronto,Toronto,2,18,True,True
+339,129,ATLAS INDUSTRIES - Beijing,Beijing,11,18,False,True
+340,129,ATLAS INDUSTRIES - Singapore,Singapore,18,45,False,True
+341,129,ATLAS INDUSTRIES - Santiago,Santiago,24,64,False,True
+847,315,GAMMA TECHNOLOGIES - Kuala Lumpur,Kuala Lumpur,15,54,True,True
+1029,379,EPSILON INDUSTRIES - Milan,Milan,9,64,True,True
+1030,379,EPSILON INDUSTRIES - Buenos Aires,Buenos Aires,22,59,False,True
+1121,413,NEXUS MATERIALS - Detroit,Detroit,1,23,True,True
+1122,413,NEXUS MATERIALS - Sao Paulo,Sao Paulo,4,49,False,True
+1123,413,NEXUS MATERIALS - Milan,Milan,9,55,False,True
+427,161,FLUX SEMICONDUCTORS - Suzhou,Suzhou,11,56,True,True
+428,161,FLUX SEMICONDUCTORS - Dongguan,Dongguan,11,51,False,True
+358,137,ECHO SYSTEMS - Guadalajara,Guadalajara,3,55,True,True
+359,137,ECHO SYSTEMS - Sao Paulo,Sao Paulo,4,20,False,True
+360,137,ECHO SYSTEMS - Suzhou,Suzhou,11,50,False,True
+1043,384,LAMBDA ELECTRONICS - Milan,Milan,9,38,True,True
+1044,384,LAMBDA ELECTRONICS - Hsinchu,Hsinchu,14,27,False,True
+1045,384,LAMBDA ELECTRONICS - Bangkok,Bangkok,17,21,False,True
+1046,384,LAMBDA ELECTRONICS - Singapore,Singapore,18,26,False,True
+563,210,CREST MANUFACTURING - Warsaw,Warsaw,10,43,True,True
+564,210,CREST MANUFACTURING - Beijing,Beijing,11,31,False,True
+565,210,CREST MANUFACTURING - Taichung,Taichung,14,69,False,True
+566,210,CREST MANUFACTURING - Manila,Manila,19,71,False,True
+781,286,OMEGA PRECISION - Monterrey,Monterrey,3,69,True,True
+782,286,OMEGA PRECISION - Seoul,Seoul,13,61,False,True
+783,286,OMEGA PRECISION - Chennai,Chennai,21,38,False,True
+254,92,ZENITH COMPONENTS - Stuttgart,Stuttgart,5,57,True,True
+255,92,ZENITH COMPONENTS - London,London,7,44,False,True
+256,92,ZENITH COMPONENTS - Shanghai,Shanghai,11,71,False,True
+257,92,ZENITH COMPONENTS - Shenzhen,Shenzhen,11,23,False,True
+258,92,ZENITH COMPONENTS - Chennai,Chennai,21,49,False,True
+1194,438,CRYO SOLUTIONS - Shanghai,Shanghai,11,44,True,True
+283,103,NOVA MATERIALS - Dongguan,Dongguan,11,25,True,True
+284,103,NOVA MATERIALS - Jakarta,Jakarta,20,15,False,True
+1200,441,FERRO SEMICONDUCTORS - London,London,7,45,True,True
+147,58,QUANTUM SOLUTIONS - Austin,Austin,1,25,True,True
+148,58,QUANTUM SOLUTIONS - Warsaw,Warsaw,10,26,False,True
+149,58,QUANTUM SOLUTIONS - Bangalore,Bangalore,21,47,False,True
+362,139,ECHO INDUSTRIES - Milan,Milan,9,67,True,True
+363,139,ECHO INDUSTRIES - Seoul,Seoul,13,39,False,True
+364,139,ECHO INDUSTRIES - Kuala Lumpur,Kuala Lumpur,15,43,False,True
+365,139,ECHO INDUSTRIES - Singapore,Singapore,18,60,False,True
+100,39,VERTEX INDUSTRIES - Osaka,Osaka,12,33,True,True
+101,39,VERTEX INDUSTRIES - Kuala Lumpur,Kuala Lumpur,15,72,False,True
+1082,397,IOTA SYSTEMS - Pune,Pune,21,61,True,True
+597,222,COBALT COMPONENTS - London,London,7,51,True,True
+685,254,SYNTH ELECTRONICS - Guadalajara,Guadalajara,3,55,True,True
+686,254,SYNTH ELECTRONICS - Ho Chi Minh City,Ho Chi Minh City,16,23,False,True
+717,266,PULSE PRECISION - San Jose,San Jose,1,37,True,True
+718,266,PULSE PRECISION - Monterrey,Monterrey,3,35,False,True
+719,266,PULSE PRECISION - Seoul,Seoul,13,53,False,True
+985,365,BETA TECHNOLOGIES - Munich,Munich,5,44,True,True
+986,365,BETA TECHNOLOGIES - London,London,7,29,False,True
+987,365,BETA TECHNOLOGIES - Shenzhen,Shenzhen,11,36,False,True
+196,74,ORION ELECTRONICS - Warsaw,Warsaw,10,58,True,True
+197,74,ORION ELECTRONICS - Singapore,Singapore,18,73,False,True
+57,25,PENTAWAVE TECHNOLOGIES - Taichung,Taichung,14,41,True,True
+58,25,PENTAWAVE TECHNOLOGIES - Bangalore,Bangalore,21,36,False,True
+59,25,PENTAWAVE TECHNOLOGIES - Bogota,Bogota,23,23,False,True
+831,309,DELTA INDUSTRIES - Monterrey,Monterrey,3,66,True,True
+832,309,DELTA INDUSTRIES - Sao Paulo,Sao Paulo,4,58,False,True
+833,309,DELTA INDUSTRIES - Stuttgart,Stuttgart,5,35,False,True
+834,309,DELTA INDUSTRIES - Singapore,Singapore,18,64,False,True
+1114,411,NEXUS SEMICONDUCTORS - Sao Paulo,Sao Paulo,4,33,True,True
+1115,411,NEXUS SEMICONDUCTORS - Munich,Munich,5,53,False,True
+1116,411,NEXUS SEMICONDUCTORS - London,London,7,35,False,True
+111,42,SOLARIS COMPONENTS - Milan,Milan,9,26,True,True
+112,42,SOLARIS COMPONENTS - Dongguan,Dongguan,11,18,False,True
+113,42,SOLARIS COMPONENTS - Tokyo,Tokyo,12,72,False,True
+114,42,SOLARIS COMPONENTS - Bangkok,Bangkok,17,17,False,True
+763,281,OMEGA SEMICONDUCTORS - Seoul,Seoul,13,16,True,True
+764,281,OMEGA SEMICONDUCTORS - Taichung,Taichung,14,20,False,True
+398,152,HELIX COMPONENTS - Amsterdam,Amsterdam,8,50,True,True
+399,152,HELIX COMPONENTS - Jakarta,Jakarta,20,38,False,True
+408,155,HELIX TECHNOLOGIES - Detroit,Detroit,1,26,True,True
+409,155,HELIX TECHNOLOGIES - Seoul,Seoul,13,64,False,True
+410,155,HELIX TECHNOLOGIES - Bogota,Bogota,23,17,False,True
+240,88,TITAN SOLUTIONS - Tokyo,Tokyo,12,14,True,True
+241,88,TITAN SOLUTIONS - Bangkok,Bangkok,17,21,False,True
+242,88,TITAN SOLUTIONS - Buenos Aires,Buenos Aires,22,50,False,True
+243,88,TITAN SOLUTIONS - Bogota,Bogota,23,46,False,True
+402,154,HELIX ELECTRONICS - Toronto,Toronto,2,42,True,True
+403,154,HELIX ELECTRONICS - Stuttgart,Stuttgart,5,15,False,True
+404,154,HELIX ELECTRONICS - Beijing,Beijing,11,54,False,True
+405,154,HELIX ELECTRONICS - Singapore,Singapore,18,38,False,True
+406,154,HELIX ELECTRONICS - Buenos Aires,Buenos Aires,22,16,False,True
+407,154,HELIX ELECTRONICS - Santiago,Santiago,24,19,False,True
+614,228,COBALT SOLUTIONS - Monterrey,Monterrey,3,35,True,True
+615,228,COBALT SOLUTIONS - Ho Chi Minh City,Ho Chi Minh City,16,48,False,True
+667,249,MATRIX INDUSTRIES - Toronto,Toronto,2,37,True,True
+668,249,MATRIX INDUSTRIES - Osaka,Osaka,12,33,False,True
+669,249,MATRIX INDUSTRIES - Bogota,Bogota,23,45,False,True
+159,62,APEX COMPONENTS - Hsinchu,Hsinchu,14,49,True,True
+160,62,APEX COMPONENTS - Ho Chi Minh City,Ho Chi Minh City,16,43,False,True
+161,62,APEX COMPONENTS - Bogota,Bogota,23,21,False,True
+215,81,TITAN SEMICONDUCTORS - Toronto,Toronto,2,61,True,True
+216,81,TITAN SEMICONDUCTORS - Milan,Milan,9,29,False,True
+217,81,TITAN SEMICONDUCTORS - Shanghai,Shanghai,11,21,False,True
+218,81,TITAN SEMICONDUCTORS - Ho Chi Minh City,Ho Chi Minh City,16,64,False,True
+418,158,HELIX SOLUTIONS - Toronto,Toronto,2,56,True,True
+419,158,HELIX SOLUTIONS - Dongguan,Dongguan,11,66,False,True
+420,158,HELIX SOLUTIONS - Ho Chi Minh City,Ho Chi Minh City,16,73,False,True
+421,158,HELIX SOLUTIONS - Hanoi,Hanoi,16,35,False,True
+422,158,HELIX SOLUTIONS - Bangkok,Bangkok,17,49,False,True
+1071,393,IOTA MATERIALS - Pune,Pune,21,23,True,True
+820,303,DELTA MATERIALS - Bogota,Bogota,23,66,True,True
+437,165,FLUX TECHNOLOGIES - San Jose,San Jose,1,62,True,True
+438,165,FLUX TECHNOLOGIES - Warsaw,Warsaw,10,54,False,True
+124,47,SOLARIS SYSTEMS - San Jose,San Jose,1,52,True,True
+125,47,SOLARIS SYSTEMS - Monterrey,Monterrey,3,66,False,True
+126,47,SOLARIS SYSTEMS - Guadalajara,Guadalajara,3,16,False,True
+127,47,SOLARIS SYSTEMS - Munich,Munich,5,69,False,True
+128,47,SOLARIS SYSTEMS - Penang,Penang,15,26,False,True
+967,357,ALPHA SYSTEMS - Munich,Munich,5,22,True,True
+968,357,ALPHA SYSTEMS - Paris,Paris,6,70,False,True
+969,357,ALPHA SYSTEMS - Suzhou,Suzhou,11,68,False,True
+1005,371,EPSILON SEMICONDUCTORS - Beijing,Beijing,11,17,True,True
+342,130,ATLAS MANUFACTURING - Ho Chi Minh City,Ho Chi Minh City,16,29,True,True
+765,282,OMEGA COMPONENTS - Kuala Lumpur,Kuala Lumpur,15,51,True,True
+766,282,OMEGA COMPONENTS - Ho Chi Minh City,Ho Chi Minh City,16,31,False,True
+767,282,OMEGA COMPONENTS - Manila,Manila,19,15,False,True
+1083,398,IOTA SOLUTIONS - Stuttgart,Stuttgart,5,32,True,True
+1084,398,IOTA SOLUTIONS - Shanghai,Shanghai,11,68,False,True
+1085,398,IOTA SOLUTIONS - Taichung,Taichung,14,25,False,True
+691,256,SYNTH PRECISION - Warsaw,Warsaw,10,25,True,True
+692,256,SYNTH PRECISION - Santiago,Santiago,24,21,False,True
+1021,376,EPSILON PRECISION - Bangkok,Bangkok,17,51,True,True
+1022,376,EPSILON PRECISION - Chennai,Chennai,21,65,False,True
+1132,417,NEXUS SYSTEMS - Monterrey,Monterrey,3,70,True,True
+1133,417,NEXUS SYSTEMS - Tokyo,Tokyo,12,50,False,True
+1134,417,NEXUS SYSTEMS - Bogota,Bogota,23,26,False,True
+1148,424,PYRO ELECTRONICS - San Jose,San Jose,1,47,True,True
+1149,424,PYRO ELECTRONICS - Shenzhen,Shenzhen,11,40,False,True
+760,280,DRIFT MANUFACTURING - San Jose,San Jose,1,38,True,True
+761,280,DRIFT MANUFACTURING - Ho Chi Minh City,Ho Chi Minh City,16,38,False,True
+762,280,DRIFT MANUFACTURING - Manila,Manila,19,40,False,True
+1061,389,LAMBDA INDUSTRIES - Pune,Pune,21,73,True,True
+24,10,NEXORA MANUFACTURING - Dongguan,Dongguan,11,25,True,True
+25,10,NEXORA MANUFACTURING - Jakarta,Jakarta,20,23,False,True
+567,211,LUNAR SEMICONDUCTORS - Austin,Austin,1,44,True,True
+568,211,LUNAR SEMICONDUCTORS - Suzhou,Suzhou,11,62,False,True
+569,211,LUNAR SEMICONDUCTORS - Osaka,Osaka,12,51,False,True
+201,76,ORION PRECISION - San Jose,San Jose,1,28,True,True
+202,76,ORION PRECISION - Hsinchu,Hsinchu,14,48,False,True
+647,241,MATRIX SEMICONDUCTORS - Stuttgart,Stuttgart,5,72,True,True
+648,241,MATRIX SEMICONDUCTORS - Beijing,Beijing,11,42,False,True
+203,77,ORION SYSTEMS - Detroit,Detroit,1,59,True,True
+204,77,ORION SYSTEMS - Ho Chi Minh City,Ho Chi Minh City,16,26,False,True
+205,77,ORION SYSTEMS - Manila,Manila,19,28,False,True
+131,50,SOLARIS MANUFACTURING - Guadalajara,Guadalajara,3,44,True,True
+447,170,FLUX MANUFACTURING - Sao Paulo,Sao Paulo,4,22,True,True
+448,170,FLUX MANUFACTURING - Hanoi,Hanoi,16,57,False,True
+449,171,IONIC SEMICONDUCTORS - Sao Paulo,Sao Paulo,4,19,True,True
+450,171,IONIC SEMICONDUCTORS - Dongguan,Dongguan,11,72,False,True
+451,171,IONIC SEMICONDUCTORS - Hsinchu,Hsinchu,14,45,False,True
+414,157,HELIX SYSTEMS - Toronto,Toronto,2,32,True,True
+415,157,HELIX SYSTEMS - Paris,Paris,6,40,False,True
+416,157,HELIX SYSTEMS - Shanghai,Shanghai,11,35,False,True
+417,157,HELIX SYSTEMS - Beijing,Beijing,11,65,False,True
+62,27,PENTAWAVE SYSTEMS - Amsterdam,Amsterdam,8,48,True,True
+63,27,PENTAWAVE SYSTEMS - Singapore,Singapore,18,43,False,True
+64,27,PENTAWAVE SYSTEMS - Pune,Pune,21,29,False,True
+786,288,OMEGA SOLUTIONS - Tokyo,Tokyo,12,29,True,True
+824,305,DELTA TECHNOLOGIES - Suzhou,Suzhou,11,33,True,True
+825,305,DELTA TECHNOLOGIES - Seoul,Seoul,13,64,False,True
+826,305,DELTA TECHNOLOGIES - Pune,Pune,21,24,False,True
+49,23,PENTAWAVE MATERIALS - Buenos Aires,Buenos Aires,22,61,True,True
+1130,416,NEXUS PRECISION - Amsterdam,Amsterdam,8,28,True,True
+1131,416,NEXUS PRECISION - Hanoi,Hanoi,16,37,False,True
+776,285,OMEGA TECHNOLOGIES - Bangkok,Bangkok,17,25,True,True
+777,285,OMEGA TECHNOLOGIES - Singapore,Singapore,18,65,False,True
+778,285,OMEGA TECHNOLOGIES - Jakarta,Jakarta,20,22,False,True
+779,285,OMEGA TECHNOLOGIES - Buenos Aires,Buenos Aires,22,22,False,True
+780,285,OMEGA TECHNOLOGIES - Santiago,Santiago,24,49,False,True
+206,78,ORION SOLUTIONS - Monterrey,Monterrey,3,62,True,True
+207,78,ORION SOLUTIONS - Paris,Paris,6,23,False,True
+208,78,ORION SOLUTIONS - Warsaw,Warsaw,10,22,False,True
+21,9,NEXORA INDUSTRIES - Monterrey,Monterrey,3,20,True,True
+22,9,NEXORA INDUSTRIES - Hsinchu,Hsinchu,14,23,False,True
+23,9,NEXORA INDUSTRIES - Bogota,Bogota,23,36,False,True
+1105,407,TORUS SYSTEMS - Warsaw,Warsaw,10,57,True,True
+872,326,ZETA PRECISION - Suzhou,Suzhou,11,70,True,True
+873,326,ZETA PRECISION - Bangkok,Bangkok,17,39,False,True
+40,18,BLUEFORGE SOLUTIONS - Bangkok,Bangkok,17,46,True,True
+41,18,BLUEFORGE SOLUTIONS - Chennai,Chennai,21,66,False,True
+528,197,STELLAR SYSTEMS - Warsaw,Warsaw,10,28,True,True
+529,197,STELLAR SYSTEMS - Dongguan,Dongguan,11,51,False,True
+530,197,STELLAR SYSTEMS - Osaka,Osaka,12,62,False,True
+911,343,THETA MATERIALS - San Jose,San Jose,1,19,True,True
+912,343,THETA MATERIALS - Stuttgart,Stuttgart,5,35,False,True
+913,343,THETA MATERIALS - Hanoi,Hanoi,16,45,False,True
+914,343,THETA MATERIALS - Jakarta,Jakarta,20,42,False,True
+915,343,THETA MATERIALS - Buenos Aires,Buenos Aires,22,14,False,True
+882,331,KAPPA SEMICONDUCTORS - Shenzhen,Shenzhen,11,31,True,True
+1072,394,IOTA ELECTRONICS - Austin,Austin,1,56,True,True
+1073,394,IOTA ELECTRONICS - San Jose,San Jose,1,28,False,True
+1074,394,IOTA ELECTRONICS - Munich,Munich,5,32,False,True
+1075,394,IOTA ELECTRONICS - Shenzhen,Shenzhen,11,37,False,True
+1031,380,EPSILON MANUFACTURING - Amsterdam,Amsterdam,8,58,True,True
+1032,380,EPSILON MANUFACTURING - Milan,Milan,9,37,False,True
+943,350,THETA MANUFACTURING - Austin,Austin,1,38,True,True
+944,350,THETA MANUFACTURING - Guadalajara,Guadalajara,3,51,False,True
+945,350,THETA MANUFACTURING - Shanghai,Shanghai,11,68,False,True
+946,350,THETA MANUFACTURING - Hsinchu,Hsinchu,14,27,False,True
+947,350,THETA MANUFACTURING - Ho Chi Minh City,Ho Chi Minh City,16,54,False,True
+948,350,THETA MANUFACTURING - Hanoi,Hanoi,16,29,False,True
+949,350,THETA MANUFACTURING - Bangkok,Bangkok,17,26,False,True
+950,350,THETA MANUFACTURING - Jakarta,Jakarta,20,55,False,True
+1006,372,EPSILON COMPONENTS - Monterrey,Monterrey,3,58,True,True
+1007,372,EPSILON COMPONENTS - Taichung,Taichung,14,39,False,True
+1008,372,EPSILON COMPONENTS - Ho Chi Minh City,Ho Chi Minh City,16,21,False,True
+1009,372,EPSILON COMPONENTS - Santiago,Santiago,24,68,False,True

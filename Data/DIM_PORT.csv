@@ -1,0 +1,41 @@
+PORT_ID,PORT_NAME,PORT_CODE,COUNTRY_ID,PORT_TYPE
+1,Chicago OHare,USORD,1,AIR
+2,Frankfurt Airport,DEFRA,5,AIR
+3,Guadalajara Airport,MXGDL,3,AIR
+4,Heathrow Airport,GBLHR,7,AIR
+5,JFK Airport,USJFK,1,AIR
+6,Narita Airport,JPNRT,12,AIR
+7,Shanghai Pudong Airport,CNPVG,11,AIR
+8,Shenzhen Airport,CNSZX_A,11,AIR
+9,Taoyuan Airport,TWTPE,14,AIR
+10,Port of Singapore,SGSIN,18,BOTH
+11,Port Klang,MYPKG,15,SEA
+12,Port of Buenos Aires,ARBUE,22,SEA
+13,Port of Busan,KRPUS,13,SEA
+14,Port of Chennai,INMAA,21,SEA
+15,Port of Felixstowe,GBFXT,7,SEA
+16,Port of Gdansk,PLGDN,10,SEA
+17,Port of Genoa,ITGOA,9,SEA
+18,Port of Hamburg,DEHAM,5,SEA
+19,Port of Ho Chi Minh,VNSGN,16,SEA
+20,Port of Houston,USHOU,1,SEA
+21,Port of Jakarta,IDJKT,20,SEA
+22,Port of Kaohsiung,TWKHH,14,SEA
+23,Port of Laem Chabang,THLCH,17,SEA
+24,Port of Lazaro Cardenas,MXLZC,3,SEA
+25,Port of Le Havre,FRLEH,6,SEA
+26,Port of Long Beach,USLGB,1,SEA
+27,Port of Los Angeles,USLAX,1,SEA
+28,Port of Manila,PHMNL,19,SEA
+29,Port of Manzanillo,MXMAN,3,SEA
+30,Port of Mumbai,INBOM,21,SEA
+31,Port of Ningbo,CNNBO,11,SEA
+32,Port of Penang,MYPEN,15,SEA
+33,Port of Rotterdam,NLRTM,8,SEA
+34,Port of Santos,BRSTS,4,SEA
+35,Port of Savannah,USSAV,1,SEA
+36,Port of Shanghai,CNSHA,11,SEA
+37,Port of Shenzhen,CNSZX,11,SEA
+38,Port of Tokyo,JPTYO,12,SEA
+39,Port of Valparaiso,CLVAP,24,SEA
+40,Port of Vancouver,CAVAN,2,SEA
