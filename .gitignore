@@ -34,5 +34,17 @@ Thumbs.db
 *.pre-*
 *.tmp
 
-# Hackathon template (5MB binary, not code)
+# Organiser's blank template (5MB binary, not code). The completed
+# submission deck IS tracked.
 Prototype Submission Template*.pptx
+
+# ---------------------------------------------------------------------------
+# Bulk row-level CSV exports (138 MB). Excluded because they are fully
+# regenerable: 01_base_tables_and_data.sql builds them from a fixed seed, so
+# the SQL is the source of truth and the CSVs are just one materialisation.
+# The largest alone is 71 MB, past GitHub's warning threshold.
+Data/
+
+# The knowledge graph itself IS tracked (KG__KG_NODES.csv, KG__KG_EDGES.csv,
+# SEMANTIC__DOCUMENT_CORPUS.csv) - 5 MB total, and the artifact this project
+# is actually about.
